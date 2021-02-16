@@ -10,7 +10,7 @@
          //Ringba.com phone number tracking
          var ringba_com_tag="JSa57f1d74e96a4f64b24eb2667a1a69d9";
          var _sc = d.getElementsByTagName('script'), _s = _sc[_sc.length - 1];
-         e._rgba = e._rgba || { q: [] }; e._rgba.q.push({ tag: ringba_com_tag, script: _s });
+         e._rgba = e._rgba || { q: new Array() }; e._rgba.q.push({ tag: ringba_com_tag, script: _s });
          if (!(e._rgba.loading = !!e._rgba.loading)) {
              var sc = d.createElement('script'); sc.type = 'text/javascript'; sc.async = true;
              sc.src = '//js.callcdn.com/js_v3/min/ringba.com.js';
@@ -26,7 +26,7 @@
       <script type="text/javascript">
          (function (window) {
              var _rgba_scripts = document.getElementsByTagName('script');
-             window._rgba = window._rgba || { q: [] };
+             window._rgba = window._rgba || { q: new Array() };
              window._rgba.q.push({
                 tag: "JSa57f1d74e96a4f64b24eb2667a1a69d9",
                 render: false,
@@ -49,7 +49,7 @@
       </script>
       <script "text/javascript">
         function pushTag() {
-          (window._rgba_tags = (window._rgba_tags || [])).push({'name':"isa-2"});
+          (window._rgba_tags = (window._rgba_tags || new Array())).push({'name':"isa-2"});
         }
       </script>
    </body>
