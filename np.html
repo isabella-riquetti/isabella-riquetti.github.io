@@ -26,16 +26,19 @@
       <script type="text/javascript">
          (function (window) {
              var _rgba_scripts = document.getElementsByTagName('script');
-             window._rgba = window._rgba || { q: [] }; window._rgba.q.push({
-                 tag: "keyboard",
-                 render: false,
-                 numberClass: "phn",
-                 cb: function (number) { alert(number); },
-                 script: _rgba_scripts[_rgba_scripts.length - 1]
+             window._rgba = window._rgba || { q: [] };
+             window._rgba.q.push({
+                tag: ringba_com_tag,
+                render: false,
+                numberClass: "phNumber",
+                cb: function (number) { alert(number); },
+                script: _rgba_scripts[_rgba_scripts.length - 1]
              });
              if (!(window._rgba.loading = !!window._rgba.loading)) {
                  (function () {
-                     var sc = document.createElement('script'); sc.type = 'text/javascript'; sc.async = true;
+                     var sc = document.createElement('script');
+                     sc.type = 'text/javascript';
+                     sc.async = true;
                      sc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'localhost:61573/dist/js_v3/ringba.com.js';
                      //sc.src = 'dist/js_v2/ringba.com.js';
                      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sc, s);
