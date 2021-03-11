@@ -12,16 +12,18 @@
       <button onclick="pushTag()">Push Tag</button>
       <p>
          <script "text/javascript">
-         function pushTag() {
-         window._rgba_tags = new Array();
-         (window._rgba_tags = (window._rgba_tags || [])).push({city: "BH"});
-         (window._rgba_tags = (window._rgba_tags || [])).push({state: "MG"});
-         (window._rgba_tags = (window._rgba_tags || [])).push({hsanalyticssource: "ORGANIC_SEARCH"});
-         (window._rgba_tags = (window._rgba_tags || [])).push({hsanalyticssourcedata2: "GOOGLE"});
-         (window._rgba_tags = (window._rgba_tags || [])).push({hsgoogleclickid: "15ba0145-ab58-4554-8436-bf582ab89ec4"});
-         (window._rgba_tags = (window._rgba_tags || [])).push({searchterm: "test"});
-         (window._rgba_tags = (window._rgba_tags || [])).push({hsanalyticsfirsturl: "www.google.com"});
-         }
+            function pushTag() {
+               window._rgba_tags = new Array();
+               (window._rgba_tags = (window._rgba_tags || [])).push({
+                  city: "BH",
+                  state: "MG",
+                  hsanalyticssource: "ORGANIC_SEARCH",
+                  hsanalyticssourcedata2: "GOOGLE",
+                  hsgoogleclickid: "15ba0145-ab58-4554-8436-bf582ab89ec4",
+                  searchterm: "test",
+                  hsanalyticsfirsturl: "www.google.com"
+               });
+            }
          </script>
    </body>
 </html>
