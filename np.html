@@ -13,15 +13,18 @@ window._rgba_tags = (window._rgba_tags || new Array());
 <body >
 Here you will see your Pool Number new! = <span class="phNumber">+5531996340684</span>
   <button onclick="pushTag()">Push Tag</button>
-  <button onclick="pushOtherTag()">Push Another Tag </button>
 <p>
   <script "text/javascript">
    
     function pushTag() {
-      (window._rgba_tags = (window._rgba_tags || [])).push({Source: "SOURCE"});
-      (window._rgba_tags = (window._rgba_tags || [])).push({Gclid: "GCLID"});
-      (window._rgba_tags = (window._rgba_tags || [])).push({PPCkeyword: "PPCKEYWORD"});
-      (window._rgba_tags = (window._rgba_tags || [])).push({LastLandingPageVisited: "LASTLANDINGPAGEVISITED"});
+      window._rgba_tags = new Array();
+      (window._rgba_tags = (window._rgba_tags || [])).push({city: "BH"});
+      (window._rgba_tags = (window._rgba_tags || [])).push({state: "MG"});
+      (window._rgba_tags = (window._rgba_tags || [])).push({hs_analytics_source: "ORGANIC_SEARCH"});
+      (window._rgba_tags = (window._rgba_tags || [])).push({hs_analytics_source_data_2: "GOOGLE"});
+      (window._rgba_tags = (window._rgba_tags || [])).push({hs_google_click_id: "15ba0145-ab58-4554-8436-bf582ab89ec4"});
+      (window._rgba_tags = (window._rgba_tags || [])).push({search_term: "test"});
+      (window._rgba_tags = (window._rgba_tags || [])).push({hs_analytics_first_url: "www.google.com"});
     }
   </script>
 </body>
