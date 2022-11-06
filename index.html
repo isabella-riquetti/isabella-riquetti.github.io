@@ -4,50 +4,79 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Reports</title>
+	<title>Isabella R Emidio</title>
 
 	<script src="./Content/js/jquery-3.6.0.min.js"></script>
 
 	<!-- Essentials -->
 	<link rel="stylesheet" href="./Content/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="./Content/css/all.min.css" />
-	<link rel="stylesheet" href="./Content/css/daterangepicker.css" />
 
 	<!-- Customs -->
-	<link rel="stylesheet" href="./Content/css/custom.css" />
-
 	<script src="./Content/js/moment.js"></script>
 	<script src="./Content/js/bootstrap.bundle.min.js"></script>
 	<script src="./Content/js/bootstrap.min.js"></script>
 	<script src="./Content/js/chart.min.js"></script>
 </head>
 <style>
-	#experience-canvas {
-		width: 80%;
+	#timeline {
+		height: 50vh;
 		margin: 0 50px;
 	}
+	
+	@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #2d2d2d;
+        color: white;
+    }
+}
 </style>
 
-<body style="cursor: auto;">
+<body>
 	<main role="main" class="wrapper">
-		<!-- Content -->
-		<div id="content">
+		<article id="experience">
+			<section id="timeline">
 			<!-- Upper actions -->
-			<!-- Charts grid -->
-			<div id="experience">
-				<canvas id="experience-canvas"></canvas>
-			</div>
-		</div>
+				<canvas id="experience-timeline-canvas"></canvas>
+			</section>
+		</article>
 	
 	</main>
 	<script type="text/javascript">
+		let currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? "DARK" : "LIGHT";
+		const COLORS = {
+			LIGHT: {
+				FONT_COLOR: '#777777',
+				GRID: '#e8e8e8',
+				BARS: {
+					BACKEND_AND_FRAMEWORKS: 'rgb(100,230,150)',
+					FRONTEND_AND_FRAMEWORKS: 'rgb(255,155,125)',
+					DATABASE: 'rgb(175,160,230)',
+					CLOUD: 'rgb(255,210,145)',
+					PM_FRAMEWORKS: 'rgb(255,165,255)',
+					OTHERS: 'rgb(125,200,215)',
+				}
+			},
+			DARK: {
+				FONT_COLOR: 'darkgray',
+				GRID: '#525252',
+				BARS: {
+					BACKEND_AND_FRAMEWORKS: 'rgb(55,115,80)',
+					FRONTEND_AND_FRAMEWORKS: 'rgb(145,70,50)',
+					DATABASE: 'rgb(60,65,120)',
+					CLOUD: 'rgb(196,122,83)',
+					PM_FRAMEWORKS: 'rgb(115,55,115)',
+					OTHERS: 'rgb(55,105,115)',
+				}
+			},
+		}
 
 		$(document).ready(function () {
 			addExperience();
 		});
 
 		function addExperience(state) {
-			const ctx = document.getElementById("experience-canvas").getContext('2d');
+			const ctx = document.getElementById("experience-timeline-canvas").getContext('2d');
 
 			let params = {
 				type: "bar",
@@ -78,42 +107,44 @@
 							[moment(new Date(2021,3,1)).valueOf(), moment(new Date()).valueOf().valueOf()], //Docker
 						],
 						backgroundColor: [
-							'rgb(245 185 202)',//
-							'rgb(245 185 202)',
-							'rgb(245 185 202)',
-							'rgb(245 185 202)',
-							'rgb(245 185 202)',
-							'rgb(245 185 202)',
-							'rgb(245 185 202)',
-							'rgb(185 223 165)',
-							'rgb(185 223 165)',
-							'rgb(185 223 165)',
-							'rgb(185 223 165)',
-							'rgb(185 178 219)',
-							'rgb(185 178 219)',
-							'rgb(245 213 185)',
-							'rgb(245 213 185)',
-							'rgb(245 213 185)',
-							'rgb(245 213 185)',
-							'rgb(165 218 230)',
-							'rgb(165 218 230)',
-							'rgb(165 218 230)',
-							'rgb(254 227 184)'
+							COLORS[currentTheme].BARS.BACKEND_AND_FRAMEWORKS,
+							COLORS[currentTheme].BARS.BACKEND_AND_FRAMEWORKS,
+							COLORS[currentTheme].BARS.BACKEND_AND_FRAMEWORKS,
+							COLORS[currentTheme].BARS.BACKEND_AND_FRAMEWORKS,
+							COLORS[currentTheme].BARS.BACKEND_AND_FRAMEWORKS,
+							COLORS[currentTheme].BARS.BACKEND_AND_FRAMEWORKS,
+							COLORS[currentTheme].BARS.BACKEND_AND_FRAMEWORKS,
+							COLORS[currentTheme].BARS.FRONTEND_AND_FRAMEWORKS,
+							COLORS[currentTheme].BARS.FRONTEND_AND_FRAMEWORKS,
+							COLORS[currentTheme].BARS.FRONTEND_AND_FRAMEWORKS,
+							COLORS[currentTheme].BARS.FRONTEND_AND_FRAMEWORKS,
+							COLORS[currentTheme].BARS.DATABASE,
+							COLORS[currentTheme].BARS.DATABASE,
+							COLORS[currentTheme].BARS.DATABASE,
+							COLORS[currentTheme].BARS.DATABASE,
+							COLORS[currentTheme].BARS.CLOUD,
+							COLORS[currentTheme].BARS.CLOUD,
+							COLORS[currentTheme].BARS.PM_FRAMEWORKS,
+							COLORS[currentTheme].BARS.PM_FRAMEWORKS,
+							COLORS[currentTheme].BARS.PM_FRAMEWORKS,
+							COLORS[currentTheme].BARS.OTHERS,
 						],
+						borderWidth: 0,
 						label: "Duration"
 					}]
 				},
 				options: {
-					maintainAspectRatio: false,
 					responsive: true,
+					maintainAspectRatio: false,
 					indexAxis: 'y',
 					plugins: {
 						title: {
-							display: true,
-							text: "Professional Experience"
+							display: false,
 						},
 						tooltip: {
-							yAlign: 'top',
+							position: 'average',
+							yAlign: 'bottom',
+							xAlign: 'center',
 							callbacks: {
 								label: tooltipItem => `${getExperience(tooltipItem.raw[0],tooltipItem.raw[1])} (${getReadbleRange(tooltipItem.raw[0], tooltipItem.raw[1])})`
 							}
@@ -126,16 +157,26 @@
 						}
 					},
 					scales: {
+						y: {
+							ticks: {
+								color: COLORS[currentTheme].FONT_COLOR
+							},
+							grid: {
+								color: COLORS[currentTheme].GRID
+							}
+						},
 						x: {
 							type: 'linear',
 							position: 'left',
 							min: moment(new Date(2015,0,1)).valueOf(),
 							max: moment(new Date().setHours(0,0,0,0)).valueOf(),
 							ticks: {
-								<!-- stepSize: 2721600000, -->
-								padding: 1,
+								color: COLORS[currentTheme].FONT_COLOR,
 								beginAtZero: false,
 								callback: value => getFormattedDateFromEpoch(value)
+							},
+							grid: {
+								color: COLORS[currentTheme].GRID
 							}
 						},
 					},
