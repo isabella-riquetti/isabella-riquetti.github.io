@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" class="hydrated">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Reports</title>
+
+	<script src="./Content/js/jquery-3.6.0.min.js"></script>
+
+	<!-- Essentials -->
+	<link rel="stylesheet" href="./Content/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="./Content/css/all.min.css" />
+	<link rel="stylesheet" href="./Content/css/daterangepicker.css" />
+
+	<!-- Customs -->
+	<link rel="stylesheet" href="./Content/css/custom.css" />
+
+	<script src="./Content/js/moment.js"></script>
+	<script src="./Content/js/bootstrap.bundle.min.js"></script>
+	<script src="./Content/js/bootstrap.min.js"></script>
+	<script src="./Content/js/chart.min.js"></script>
+</head>
+<style>
+	#experience-canvas {
+		width: 80%;
+		margin: 0 50px;
+	}
+</style>
+
+<body style="cursor: auto;">
+	<main role="main" class="wrapper">
+		<!-- Content -->
+		<div id="content">
+			<!-- Upper actions -->
+			<!-- Charts grid -->
+			<div id="experience">
+				<canvas id="experience-canvas"></canvas>
+			</div>
+		</div>
+	
+	</main>
+	<script type="text/javascript">
+
+		$(document).ready(function () {
+			addExperience();
+		});
+
+		function addExperience(state) {
+			const ctx = document.getElementById("experience-canvas").getContext('2d');
+
+			let params = {
+				type: "bar",
+				data: {
+					labels: ['C#', 'Windows Form', '.NET Framework', 'ASP.NET MVC', '.NET Core', 'Javascript', 'Node.js', 'HTML/CSS', 'Angular', 'Vue', 'React', 'SQL', 'MongoDB', 'Aerospike', 'Postgres', 'Azure', 'AWS', 'Scrum', 'Kanban', 'ShapeUp', 'Docker'],
+					datasets: [{
+						data: [
+							[moment(new Date(2015,0,1)).valueOf(), moment(new Date().setHours(0,0,0,0)).valueOf()], //C#
+							[moment(new Date(2015,0,1)).valueOf(), moment(new Date(2018,0,1)).valueOf()], //Windows Form
+							[moment(new Date(2015,0,1)).valueOf(), moment(new Date(2020,10,1)).valueOf()], //.NET Framework
+							[moment(new Date(2017,0,1)).valueOf(), moment(new Date(2020,10,1)).valueOf()], //ASP.NET MVC
+							[moment(new Date(2018,0,1)).valueOf(), moment(new Date().setHours(0,0,0,0)).valueOf()], //.NET Core
+							[moment(new Date(2017,0,1)).valueOf(), moment(new Date().setHours(0,0,0,0)).valueOf()], //Javascript
+							[moment(new Date(2020,10,1)).valueOf(), moment(new Date().setHours(0,0,0,0)).valueOf()], //Node.js
+							[moment(new Date(2017,0,1)).valueOf(), moment(new Date().setHours(0,0,0,0)).valueOf()], //HTML/CSS
+							[moment(new Date(2020,10,1)).valueOf(), moment(new Date().setHours(0,0,0,0)).valueOf()], //Angular
+							[moment(new Date(2021,3,1)).valueOf(), moment(new Date(2022,3,1)).valueOf()], //Vue
+							[moment(new Date(2021,3,1)).valueOf(), moment(new Date().setHours(0,0,0,0)).valueOf()], // React
+							[moment(new Date(2015,0,1)).valueOf(), moment(new Date(2021,10,1)).valueOf()], //SQL
+							[moment(new Date(2020,10,1)).valueOf(), moment(new Date(2021,10,1)).valueOf()], //MongoDB
+							[moment(new Date(2021,3,1)).valueOf(), moment(new Date(2022,3,1)).valueOf()], //Aerospike
+							[moment(new Date(2021,3,1)).valueOf(), moment(new Date().setHours(0,0,0,0)).valueOf()], // Postgres
+							[moment(new Date(2016,0,1)).valueOf(), moment(new Date(2021,10,1)).valueOf()], //Azure
+							[moment(new Date(2021,3,1)).valueOf(), moment(new Date()).valueOf().valueOf()], //AWS
+							[moment(new Date(2016,5,1)).valueOf(), moment(new Date().setHours(0,0,0,0)).valueOf()], //Scrum
+							[moment(new Date(2018,8,1)).valueOf(), moment(new Date(2020,10,1)).valueOf()], //Kanban
+							[moment(new Date(2022,7,1)).valueOf(), moment(new Date().setHours(0,0,0,0)).valueOf()], //ShapeUp
+							[moment(new Date(2021,3,1)).valueOf(), moment(new Date()).valueOf().valueOf()], //Docker
+						],
+						backgroundColor: [
+							'rgb(245 185 202)',//
+							'rgb(245 185 202)',
+							'rgb(245 185 202)',
+							'rgb(245 185 202)',
+							'rgb(245 185 202)',
+							'rgb(245 185 202)',
+							'rgb(245 185 202)',
+							'rgb(185 223 165)',
+							'rgb(185 223 165)',
+							'rgb(185 223 165)',
+							'rgb(185 223 165)',
+							'rgb(185 178 219)',
+							'rgb(185 178 219)',
+							'rgb(245 213 185)',
+							'rgb(245 213 185)',
+							'rgb(245 213 185)',
+							'rgb(245 213 185)',
+							'rgb(165 218 230)',
+							'rgb(165 218 230)',
+							'rgb(165 218 230)',
+							'rgb(254 227 184)'
+						],
+						label: "Duration"
+					}]
+				},
+				options: {
+					maintainAspectRatio: false,
+					responsive: true,
+					indexAxis: 'y',
+					plugins: {
+						title: {
+							display: true,
+							text: "Professional Experience"
+						},
+						tooltip: {
+							yAlign: 'top',
+							callbacks: {
+								label: tooltipItem => `${getExperience(tooltipItem.raw[0],tooltipItem.raw[1])} (${getReadbleRange(tooltipItem.raw[0], tooltipItem.raw[1])})`
+							}
+						},
+						legend: {
+							display: false
+						},
+						tooltips: {
+							enabled: true
+						}
+					},
+					scales: {
+						x: {
+							type: 'linear',
+							position: 'left',
+							min: moment(new Date(2015,0,1)).valueOf(),
+							max: moment(new Date().setHours(0,0,0,0)).valueOf(),
+							ticks: {
+								<!-- stepSize: 2721600000, -->
+								padding: 1,
+								beginAtZero: false,
+								callback: value => getFormattedDateFromEpoch(value)
+							}
+						},
+					},
+				}
+			};
+
+			let newChart = new Chart(ctx, params);
+		}
+		
+		function getReadbleRange(start, end) {
+			const readbleStart = getFormattedDateFromEpoch(start);
+			const readbleEnd = getFormattedDateFromEpoch(end);
+			if(readbleEnd === "Today") return `Since ${readbleStart}`;
+			
+			return `From ${readbleStart} until ${readbleEnd}`;
+		}
+		
+		function getFormattedDateFromEpoch(epoch) {
+			let date = moment(epoch);
+			if(date ==  moment(new Date().setHours(0,0,0,0)).valueOf()) return "Today";
+			return date.format('MMMM of YYYY');
+		}
+		
+		function getExperience(start, end) {
+			var readbleExperience = "";
+			var daysDiff = (end - start)/86400000;
+			if(daysDiff > 364) {
+				let years = Math.floor(daysDiff/365);
+				readbleExperience += `${years} years`;
+				daysDiff -= years*365;
+			}
+			if(daysDiff > 30) {
+				let months = Math.floor(daysDiff/30);
+				if(readbleExperience) readbleExperience += " and ";
+				readbleExperience += `${months} months`;
+				daysDiff -= months*30;
+			}
+			if(!readbleExperience) readbleExperience = "Just starting :)";
+			
+			return readbleExperience;
+		}
+	</script>
+</body>
+
+</html>
