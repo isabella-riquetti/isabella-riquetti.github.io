@@ -1,0 +1,38 @@
+.typing-container {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1em;
+}
+#type-text {
+    margin-left: 8px;
+    letter-spacing: 6px;
+}
+
+.input-cursor {
+    display: inline-block;
+    width: 3px;
+    background-color: white;
+    height: 1em;
+    margin-left: 8px;
+    animation: blink .6s linear infinite alternate;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

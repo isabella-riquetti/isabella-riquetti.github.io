@@ -6,21 +6,27 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Isabella R Emidio</title>
 
-	<script src="./Content/js/jquery-3.6.0.min.js"></script>
+	<!-- Essentials --><!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<link rel="stylesheet" href="./css/fontawesome.min.css" />
+	<link rel="stylesheet" href="./css/solid.css" />
+	<link rel="stylesheet" href="./css/all.min.css" />
+	<link rel="stylesheet" href="./css/style.css" />
+	<link rel="stylesheet" href="./css/typing.css" />
 
-	<!-- Essentials -->
-	<link rel="stylesheet" href="./Content/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="./Content/css/all.min.css" />
-
-	<!-- Customs -->
-	<script src="./Content/js/moment.js"></script>
-	<script src="./Content/js/bootstrap.bundle.min.js"></script>
-	<script src="./Content/js/bootstrap.min.js"></script>
-	<script src="./Content/js/chart.min.js"></script>
+	<!-- Customs --><!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+	<script src="./js/fontawesome.min.js"></script>
+	<script src="./js/solid.min.js"></script>
+	<script src="./js/moment.js"></script>
+	<script src="./js/chart.min.js"></script>
+	<script src="./js/typing.js"></script>
+	<script src="./js/script.js"></script>
 </head>
 <style>
 	#timeline {
-		height: 50vh;
+		height: 80vh;
 		margin: 0 50px;
 	}
 	
@@ -33,11 +39,50 @@
 </style>
 
 <body>
+	<nav>
+		<div>
+			<a href="#experience" class="nav-item nav-link">Experience</a>
+			<a href="#skills" class="nav-item nav-link">Skills</a>
+			<a href="#home" class="nav-item nav-link active"><i class="fa-solid fa-house"></i></a>
+			<a href="#projects" class="nav-item nav-link">Projects</a>
+			<a href="#contact" class="nav-item nav-link">Contact</a>
+		</div>
+    </nav>
 	<main role="main" class="wrapper">
-		<article id="experience">
+		<article id="home">
+			<section>
+				<h1>Isabella Emidio</h1>
+				<div class="typing-container">
+					<span id="type-text"></span>
+					<span class="input-cursor"></span>
+				</div>
+				<div class="instructions">
+					<i class="fa-solid fa-caret-down"></i>
+				</div>				
+			</section>
+		</article>
+		<article id="experience" style="height: 2000px">
 			<section id="timeline">
-			<!-- Upper actions -->
+				<h1><i class="fa-solid fa-briefcase"></i> Experience</h1>
+				<canvas></canvas>
+			</section>
+		</article>
+		<article id="skills" style="height: 2000px">
+			<section id="timeline">
+				<h1><i class="fa-solid fa-mouse"></i>Skills</h1>
 				<canvas id="experience-timeline-canvas"></canvas>
+			</section>
+		</article>
+		<article id="projects" style="height: 2000px">
+			<section id="timeline">
+				<h1><i class="fa-solid fa-folder-open"></i>Projects</h1>
+				<canvas></canvas>
+			</section>
+		</article>
+		<article id="contact" style="height: 2000px">
+			<section id="timeline">
+				<h1><i class="fa-solid fa-rectangle-list"></i>Contact</h1>
+				<canvas></canvas>
 			</section>
 		</article>
 	
