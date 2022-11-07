@@ -18,3 +18,11 @@ $(window).scroll(function () {
         $('nav').fadeOut('slow');
     }
 });
+
+function toggleMenu() {
+    $("#mobile-menu").toggleClass("open");
+}
+
+$(document).on("click",".mobile-menu-item", function(){
+    $("#mobile-menu").removeClass("open");
+});

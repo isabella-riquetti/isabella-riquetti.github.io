@@ -6,17 +6,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Isabella R Emidio</title>
 
-	<!-- Essentials --><!-- CSS only -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<!-- Essentials -->
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 	<link rel="stylesheet" href="./css/fontawesome.min.css" />
 	<link rel="stylesheet" href="./css/solid.css" />
 	<link rel="stylesheet" href="./css/all.min.css" />
 	<link rel="stylesheet" href="./css/style.css" />
 	<link rel="stylesheet" href="./css/typing.css" />
 
-	<!-- Customs --><!-- JavaScript Bundle with Popper -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+	<!-- Customs -->
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+		crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+		integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 	<script src="./js/fontawesome.min.js"></script>
 	<script src="./js/solid.min.js"></script>
 	<script src="./js/moment.js"></script>
@@ -26,28 +32,40 @@
 </head>
 <style>
 	#timeline {
-		height: 80vh;
+		height: calc(100% - 150px);
 		margin: 0 50px;
 	}
-	
+
 	@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #2d2d2d;
-        color: white;
-    }
-}
+		body {
+			background-color: #2d2d2d;
+			color: white;
+		}
+	}
 </style>
 
 <body>
 	<nav>
-		<div>
+		<div id="desktop-menu">
 			<a href="#experience" class="nav-item nav-link">Experience</a>
 			<a href="#skills" class="nav-item nav-link">Skills</a>
 			<a href="#home" class="nav-item nav-link active"><i class="fa-solid fa-house"></i></a>
 			<a href="#projects" class="nav-item nav-link">Projects</a>
 			<a href="#contact" class="nav-item nav-link">Contact</a>
 		</div>
-    </nav>
+		<div id="mobile-menu">
+			<a href="javascript:void(0);" onclick="toggleMenu()">
+				<i class="fa-solid fa-bars"></i>
+			</a>
+			<div id="mobile-menu-options">
+				<a class="mobile-menu-item" href="#home" class="nav-item nav-link active">Home</a>
+				<a class="mobile-menu-item" href="#experience" class="nav-item nav-link">Experience</a>
+				<a class="mobile-menu-item" href="#skills" class="nav-item nav-link">Skills</a>
+				<a class="mobile-menu-item" href="#projects" class="nav-item nav-link">Projects</a>
+				<a class="mobile-menu-item" href="#contact" class="nav-item nav-link">Contact</a>
+			</div>
+		</div>
+	</nav>
 	<main role="main" class="wrapper">
 		<article id="home">
 			<section>
@@ -58,34 +76,34 @@
 				</div>
 				<div class="instructions">
 					<i class="fa-solid fa-caret-down"></i>
-				</div>				
+				</div>
 			</section>
 		</article>
-		<article id="experience" style="height: 2000px">
+		<article id="experience">
 			<section id="timeline">
 				<h1><i class="fa-solid fa-briefcase"></i> Experience</h1>
 				<canvas></canvas>
 			</section>
 		</article>
-		<article id="skills" style="height: 2000px">
+		<article id="skills">
 			<section id="timeline">
-				<h1><i class="fa-solid fa-mouse"></i>Skills</h1>
+				<h1><i class="fa-solid fa-wrench"></i>Skills</h1>
 				<canvas id="experience-timeline-canvas"></canvas>
 			</section>
 		</article>
-		<article id="projects" style="height: 2000px">
+		<article id="projects">
 			<section id="timeline">
 				<h1><i class="fa-solid fa-folder-open"></i>Projects</h1>
 				<canvas></canvas>
 			</section>
 		</article>
-		<article id="contact" style="height: 2000px">
+		<article id="contact">
 			<section id="timeline">
 				<h1><i class="fa-solid fa-rectangle-list"></i>Contact</h1>
 				<canvas></canvas>
 			</section>
 		</article>
-	
+
 	</main>
 	<script type="text/javascript">
 		let currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? "DARK" : "LIGHT";
@@ -129,27 +147,27 @@
 					labels: ['C#', 'Windows Form', '.NET Framework', 'ASP.NET MVC', '.NET Core', 'Javascript', 'Node.js', 'HTML/CSS', 'Angular', 'Vue', 'React', 'SQL', 'MongoDB', 'Aerospike', 'Postgres', 'Azure', 'AWS', 'Scrum', 'Kanban', 'ShapeUp', 'Docker'],
 					datasets: [{
 						data: [
-							[moment(new Date(2015,0,1)).valueOf(), moment(new Date().setHours(0,0,0,0)).valueOf()], //C#
-							[moment(new Date(2015,0,1)).valueOf(), moment(new Date(2018,0,1)).valueOf()], //Windows Form
-							[moment(new Date(2015,0,1)).valueOf(), moment(new Date(2020,10,1)).valueOf()], //.NET Framework
-							[moment(new Date(2017,0,1)).valueOf(), moment(new Date(2020,10,1)).valueOf()], //ASP.NET MVC
-							[moment(new Date(2018,0,1)).valueOf(), moment(new Date().setHours(0,0,0,0)).valueOf()], //.NET Core
-							[moment(new Date(2017,0,1)).valueOf(), moment(new Date().setHours(0,0,0,0)).valueOf()], //Javascript
-							[moment(new Date(2020,10,1)).valueOf(), moment(new Date().setHours(0,0,0,0)).valueOf()], //Node.js
-							[moment(new Date(2017,0,1)).valueOf(), moment(new Date().setHours(0,0,0,0)).valueOf()], //HTML/CSS
-							[moment(new Date(2020,10,1)).valueOf(), moment(new Date().setHours(0,0,0,0)).valueOf()], //Angular
-							[moment(new Date(2021,3,1)).valueOf(), moment(new Date(2022,3,1)).valueOf()], //Vue
-							[moment(new Date(2021,3,1)).valueOf(), moment(new Date().setHours(0,0,0,0)).valueOf()], // React
-							[moment(new Date(2015,0,1)).valueOf(), moment(new Date(2021,10,1)).valueOf()], //SQL
-							[moment(new Date(2020,10,1)).valueOf(), moment(new Date(2021,10,1)).valueOf()], //MongoDB
-							[moment(new Date(2021,3,1)).valueOf(), moment(new Date(2022,3,1)).valueOf()], //Aerospike
-							[moment(new Date(2021,3,1)).valueOf(), moment(new Date().setHours(0,0,0,0)).valueOf()], // Postgres
-							[moment(new Date(2016,0,1)).valueOf(), moment(new Date(2021,10,1)).valueOf()], //Azure
-							[moment(new Date(2021,3,1)).valueOf(), moment(new Date()).valueOf().valueOf()], //AWS
-							[moment(new Date(2016,5,1)).valueOf(), moment(new Date().setHours(0,0,0,0)).valueOf()], //Scrum
-							[moment(new Date(2018,8,1)).valueOf(), moment(new Date(2020,10,1)).valueOf()], //Kanban
-							[moment(new Date(2022,7,1)).valueOf(), moment(new Date().setHours(0,0,0,0)).valueOf()], //ShapeUp
-							[moment(new Date(2021,3,1)).valueOf(), moment(new Date()).valueOf().valueOf()], //Docker
+							[moment(new Date(2015, 0, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //C#
+							[moment(new Date(2015, 0, 1)).valueOf(), moment(new Date(2018, 0, 1)).valueOf()], //Windows Form
+							[moment(new Date(2015, 0, 1)).valueOf(), moment(new Date(2020, 10, 1)).valueOf()], //.NET Framework
+							[moment(new Date(2017, 0, 1)).valueOf(), moment(new Date(2020, 10, 1)).valueOf()], //ASP.NET MVC
+							[moment(new Date(2018, 0, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //.NET Core
+							[moment(new Date(2017, 0, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //Javascript
+							[moment(new Date(2020, 10, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //Node.js
+							[moment(new Date(2017, 0, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //HTML/CSS
+							[moment(new Date(2020, 10, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //Angular
+							[moment(new Date(2021, 3, 1)).valueOf(), moment(new Date(2022, 3, 1)).valueOf()], //Vue
+							[moment(new Date(2021, 3, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], // React
+							[moment(new Date(2015, 0, 1)).valueOf(), moment(new Date(2021, 10, 1)).valueOf()], //SQL
+							[moment(new Date(2020, 10, 1)).valueOf(), moment(new Date(2021, 10, 1)).valueOf()], //MongoDB
+							[moment(new Date(2021, 3, 1)).valueOf(), moment(new Date(2022, 3, 1)).valueOf()], //Aerospike
+							[moment(new Date(2021, 3, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], // Postgres
+							[moment(new Date(2016, 0, 1)).valueOf(), moment(new Date(2021, 10, 1)).valueOf()], //Azure
+							[moment(new Date(2021, 3, 1)).valueOf(), moment(new Date()).valueOf().valueOf()], //AWS
+							[moment(new Date(2016, 5, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //Scrum
+							[moment(new Date(2018, 8, 1)).valueOf(), moment(new Date(2020, 10, 1)).valueOf()], //Kanban
+							[moment(new Date(2022, 7, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //ShapeUp
+							[moment(new Date(2021, 3, 1)).valueOf(), moment(new Date()).valueOf().valueOf()], //Docker
 						],
 						backgroundColor: [
 							COLORS[currentTheme].BARS.BACKEND_AND_FRAMEWORKS,
@@ -191,7 +209,7 @@
 							yAlign: 'bottom',
 							xAlign: 'center',
 							callbacks: {
-								label: tooltipItem => `${getExperience(tooltipItem.raw[0],tooltipItem.raw[1])} (${getReadbleRange(tooltipItem.raw[0], tooltipItem.raw[1])})`
+								label: tooltipItem => `${getExperience(tooltipItem.raw[0], tooltipItem.raw[1])} (${getReadbleRange(tooltipItem.raw[0], tooltipItem.raw[1])})`
 							}
 						},
 						legend: {
@@ -213,8 +231,8 @@
 						x: {
 							type: 'linear',
 							position: 'left',
-							min: moment(new Date(2015,0,1)).valueOf(),
-							max: moment(new Date().setHours(0,0,0,0)).valueOf(),
+							min: moment(new Date(2015, 0, 1)).valueOf(),
+							max: moment(new Date().setHours(0, 0, 0, 0)).valueOf(),
 							ticks: {
 								color: COLORS[currentTheme].FONT_COLOR,
 								beginAtZero: false,
@@ -230,37 +248,37 @@
 
 			let newChart = new Chart(ctx, params);
 		}
-		
+
 		function getReadbleRange(start, end) {
 			const readbleStart = getFormattedDateFromEpoch(start);
 			const readbleEnd = getFormattedDateFromEpoch(end);
-			if(readbleEnd === "Today") return `Since ${readbleStart}`;
-			
+			if (readbleEnd === "Today") return `Since ${readbleStart}`;
+
 			return `From ${readbleStart} until ${readbleEnd}`;
 		}
-		
+
 		function getFormattedDateFromEpoch(epoch) {
 			let date = moment(epoch);
-			if(date ==  moment(new Date().setHours(0,0,0,0)).valueOf()) return "Today";
+			if (date == moment(new Date().setHours(0, 0, 0, 0)).valueOf()) return "Today";
 			return date.format('MMMM of YYYY');
 		}
-		
+
 		function getExperience(start, end) {
 			var readbleExperience = "";
-			var daysDiff = (end - start)/86400000;
-			if(daysDiff > 364) {
-				let years = Math.floor(daysDiff/365);
+			var daysDiff = (end - start) / 86400000;
+			if (daysDiff > 364) {
+				let years = Math.floor(daysDiff / 365);
 				readbleExperience += `${years} years`;
-				daysDiff -= years*365;
+				daysDiff -= years * 365;
 			}
-			if(daysDiff > 30) {
-				let months = Math.floor(daysDiff/30);
-				if(readbleExperience) readbleExperience += " and ";
+			if (daysDiff > 30) {
+				let months = Math.floor(daysDiff / 30);
+				if (readbleExperience) readbleExperience += " and ";
 				readbleExperience += `${months} months`;
-				daysDiff -= months*30;
+				daysDiff -= months * 30;
 			}
-			if(!readbleExperience) readbleExperience = "Just starting :)";
-			
+			if (!readbleExperience) readbleExperience = "Just starting :)";
+
 			return readbleExperience;
 		}
 	</script>
