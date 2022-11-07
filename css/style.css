@@ -105,3 +105,10 @@ article {
     background-color: white;
     top: 4px;
 }
+
+
+@media only screen and (max-width: 600px) {
+    .qualifications {
+        margin: 0 10px
+    }
+}
