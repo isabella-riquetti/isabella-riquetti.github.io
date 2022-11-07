@@ -14,7 +14,6 @@ nav a {
 #mobile-menu {
     padding-left: 10px;
     display: none;
-    color:#7c2a67;
     font-family: 'Share Tech Mono', monospace;
     font-size: 20px;
     text-transform: uppercase;
@@ -37,21 +36,8 @@ nav a {
     text-decoration: none;
 }
 
-.open#mobile-menu {
-    display: block;
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    color: white;
-    background-color: #7c2a67;
-}
-
-.open #mobile-menu-options {
-    display: flex;
-}
-
-#desktop-menu {
+.menu, #desktop-menu {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -59,11 +45,11 @@ nav a {
     align-items: center;
     text-align: center;
     height: 100px;
-    background-color: #7c2a67;
-    color: white;
     font-family: 'Share Tech Mono', monospace;
     font-size: 25px;
     text-transform: uppercase;
+    background-color: #7c2a67;
+    color: white;
 }
 
 #desktop-menu a {
@@ -88,6 +74,23 @@ a.anchor {
     a.anchor {
         top: -70px;
     }
+    .menu {
+        height: 0px;
+    }
+    
+    .open#mobile-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        color: white;
+        background-color: #7c2a67;
+    }
+
+    .open #mobile-menu-options {
+        display: flex;
+    }
 }
 
 .menu span {
@@ -102,8 +105,8 @@ a.anchor {
 .menu span, .menu span:before, .menu span:after {
 	width: 30px;
 	height: 6px;
-	background-color: purple;
 	display: block;
+    border-radius: 2px;
 }
 .menu span:before {
 	margin-top: -12px;
@@ -115,8 +118,9 @@ a.anchor {
 	-webkit-transition-duration: 0s; transition-duration: 0s;
 	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
 }
+
 .open .menu-icon span {
-	background-color: transparent;
+	background-color: transparent !important;
 	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
 }
 .menu-icon span:before {

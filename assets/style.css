@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
-body {
-    color: #7c2a67;
-}
-
 h1 {
     font-family: 'Share Tech Mono', monospace;
     margin: 40px;
@@ -24,24 +20,27 @@ h4 {
     font-size: 16px;
 }
 
-h1 svg {
-    margin-right: 0.1em;
+h1 i {
+    margin-right: 0.3em;
 }
 
 article {
     height: calc(100vh - 150px);
 }
 
-.blur {
-    color: transparent;
-    text-shadow: 0 0 16px #7c2a67;
+
+i {
+    background-color: transparent;
 }
 
+.blur {
+    color: transparent;
+}
 
 /* Home */
 .home {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-color: #7c2a67;
     color: white;
     padding: 50px;
@@ -77,6 +76,12 @@ article {
     animation: action 1s infinite alternate;
 }
 
+.home button {
+    background-color: transparent;
+    border: 0;
+    color: white;
+}
+
 @keyframes action {
     0% {
         transform: translateY(0);
@@ -88,6 +93,10 @@ article {
 }
 
 /* Experience */
+#timeline {
+    height: calc(100% - 150px);
+    margin: 0 50px;
+}
 
 .timeline {
     border-left: 1px solid #7c2a67;
@@ -99,7 +108,7 @@ article {
 }
 
 
-.timeline svg {   
+.timeline i {   
     position: absolute;
     left: -29px;
     background-color: white;

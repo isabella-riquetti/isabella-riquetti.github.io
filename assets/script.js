@@ -1,22 +1,27 @@
 
 $(window).scroll(function () {
     if ($(this).scrollTop() > 75) {
-        $('.instructions').css('color', '#7c2a67');
+        $('.instructions button').css('color', '#7c2a67');
     } else {
-        $('.instructions').css('color', 'white');
+        $('.instructions button').css('color', 'white');
     }
 
     if ($(this).scrollTop() > 175) {
-        $('.instructions').fadeOut('slow');
+        $('.instructions button').fadeOut('slow');
     } else {
-        $('.instructions').fadeIn('slow');
+        $('.instructions button').fadeIn('slow');
     }
     
-    if ($(this).scrollTop() > (window.innerHeight - (window.innerHeight/5))) {
+    if ($(this).scrollTop() > (window.innerHeight - (window.innerHeight/3))) {
         $('nav').fadeIn('slow');
     } else {
         $('nav').fadeOut('slow');
     }
+});
+
+$(window).ready(function() {
+    updateCurrentTheme();
+    addExperience();
 });
 
 function toggleMenu() {

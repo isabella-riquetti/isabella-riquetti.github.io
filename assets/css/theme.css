@@ -1,0 +1,55 @@
+/* Dark */
+body.dark {
+    background-color: #2d2d2d;
+    color: white;
+}
+
+body.dark .timeline-item i {
+    background-color: #2d2d2d;
+}
+
+body.dark .blur {
+    text-shadow: 0 0 8px white;
+}
+
+body.dark .timeline {
+    border-color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    body.dark .menu span,
+    body.dark .menu span:before,
+    body.dark .menu span:after {
+        background-color: white;
+    }
+}
+
+/* Light */
+body.light {
+    background-color: white;
+    color: #7c2a67;
+}
+
+body.light .timeline-item i {
+    background-color: white;
+}
+
+body.light .blur {
+    text-shadow: 0 0 8px #7c2a67;
+}
+
+body.light .timeline {
+    border-color: #7c2a67;
+}
+
+@media only screen and (max-width: 600px) {
+    body.light .menu span,
+    body.light .menu span:before,
+    body.light .menu span:after {
+        background-color: #7c2a67;
+    }
+    body.light .open .menu span:before,
+    body.light .open .menu span:after {
+        background-color: white;
+    }
+}

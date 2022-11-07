@@ -4,90 +4,72 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Isabella R Emidio</title>
+	<title>Isabella Emidio</title>
 
-	<!-- Essentials -->
-	<!-- CSS only -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-	<link rel="stylesheet" href="./css/fontawesome.min.css" />
-	<link rel="stylesheet" href="./css/solid.css" />
-	<link rel="stylesheet" href="./css/all.min.css" />
-	<link rel="stylesheet" href="./css/style.css" />
-	<link rel="stylesheet" href="./css/typing.css" />
-	<link rel="stylesheet" href="./css/menu.css" />
+	<link rel="stylesheet" href="./assets/css/all.min.css" />
+	<link rel="stylesheet" href="./assets/css/typing.css" />
+	<link rel="stylesheet" href="./assets/css/menu.css" />
+	<link rel="stylesheet" href="./assets/css/theme.css" />
+	<link rel="stylesheet" href="./assets/style.css" />
 
-	<!-- Customs -->
-	<!-- JavaScript Bundle with Popper -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
 		crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js"
 		integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-	<script src="./js/fontawesome.min.js"></script>
-	<script src="./js/solid.min.js"></script>
-	<script src="./js/moment.js"></script>
-	<script src="./js/chart.min.js"></script>
-	<script src="./js/typing.js"></script>
-	<script src="./js/script.js"></script>
+	<script src="./assets/js/moment.js"></script>
+	<script src="./assets/js/chart.min.js"></script>
+	<script src="./assets/js/typing.js"></script>
+	<script src="./assets/js/theme.js"></script>
+	<script src="./assets/js/skills.js"></script>
+	<script src="./assets/script.js"></script>
 </head>
-<style>
-	#timeline {
-		height: calc(100% - 150px);
-		margin: 0 50px;
-	}
-
-	@media (prefers-color-scheme: dark) {
-		body {
-			background-color: #2d2d2d;
-			color: white;
-		}
-	}
-</style>
-
-<body>
+<body class="light">
 	<nav>
-		<div id="desktop-menu">
-			<a href="#qualifications" class="nav-item nav-link">Qualifications</a>
-			<a href="#skills" class="nav-item nav-link">Skills</a>
-			<a href="#home" class="nav-item nav-link active"><i class="fa-solid fa-house"></i></a>
-			<a href="#projects" class="nav-item nav-link">Projects</a>
-			<a href="#contact" class="nav-item nav-link">Contact</a>
-		</div>
-		<div id="mobile-menu">
-			<a href="javascript:void(0);" class="menu menu-icon" onclick="toggleMenu()"><span></span></a>
-			<div id="mobile-menu-options">
-				<a class="mobile-menu-item" href="#home" class="nav-item nav-link active">Home</a>
-				<a class="mobile-menu-item" href="#qualifications" class="nav-item nav-link">Qualifications</a>
-				<a class="mobile-menu-item" href="#skills" class="nav-item nav-link">Skills</a>
-				<a class="mobile-menu-item" href="#projects" class="nav-item nav-link">Projects</a>
-				<a class="mobile-menu-item" href="#contact" class="nav-item nav-link">Contact</a>
+		<div class="menu">
+			<div id="desktop-menu">
+				<a href="#qualifications" class="nav-item nav-link">Qualifications</a>
+				<a href="#skills" class="nav-item nav-link">Skills</a>
+				<a href="#home" class="nav-item nav-link active"><i class="fas fa-home"></i></a>
+				<a href="#projects" class="nav-item nav-link">Projects</a>
+				<a href="#contact" class="nav-item nav-link">Contact</a>
+			</div>
+			<div id="mobile-menu">
+				<a href="javascript:void(0);" class="menu menu-icon" onclick="toggleMenu()"><span></span></a>
+				<div id="mobile-menu-options">
+					<a class="mobile-menu-item" href="#home" class="nav-item nav-link active">Home</a>
+					<a class="mobile-menu-item" href="#qualifications" class="nav-item nav-link">Qualifications</a>
+					<a class="mobile-menu-item" href="#skills" class="nav-item nav-link">Skills</a>
+					<a class="mobile-menu-item" href="#projects" class="nav-item nav-link">Projects</a>
+					<a class="mobile-menu-item" href="#contact" class="nav-item nav-link">Contact</a>
+				</div>
 			</div>
 		</div>
 	</nav>
 	<main role="main" class="wrapper">
-		<article class="home">
+		<article class="home" id="home">
 			<section>
-				<a class="anchor" id="home"></a>
 				<h1>Isabella Emidio</h1>
 				<div class="typing-container">
 					<span id="type-text"></span>
 					<span class="input-cursor"></span>
 				</div>
 				<div class="instructions">
-					<i class="fa-solid fa-caret-down"></i>
+					<button onclick="document.getElementById('qualifications').scrollIntoView();"><i class="fas fa-caret-down"></i></button>
 				</div>
 			</section>
 		</article>
 		<article class="qualifications" style="height: 100%">
-			<h1 class="text-center"><i class="fa-solid fa-scroll"></i> Qualifications<a class="anchor" id="qualifications"></a></h1>
+			<h1 class="text-center"><i class="fas fa-scroll"></i>Qualifications<a class="anchor" id="qualifications"></a></h1>
 			<div class="container">
 				<div class="row">
 					<section class="col-md-6">
 						<h2>Experience</h2>
 						<div class="timeline">
 							<div class="timeline-item">
-								<i class="fa-solid fa-briefcase"></i>
+								<i class="fas fa-briefcase"></i>
 								<h3>Full-Stack Developer</h3>
 								<h4>Company: <span class="blur">Company 1</span></h4>
 								<h4>Duration: <span class="blur">Mnt 20XX to Mnt 20XX</span> (~5 years)</h4>
@@ -99,7 +81,7 @@
 								</p>
 							</div>
 							<div class="timeline-item">
-								<i class="fa-solid fa-briefcase"></i>
+								<i class="fas fa-briefcase"></i>
 								<h3>Full-Stack Developer</h3>
 								<h4>Company: <span class="blur">Company 2</span></h4>
 								<h4>Duration: <span class="blur">Mnt 20XX to Mnt 20XX</span> (~1 years)</h4>
@@ -112,7 +94,7 @@
 									malesuada fames ac turpis egestas.</p>
 							</div>
 							<div class="timeline-item">
-								<i class="fa-solid fa-briefcase"></i>
+								<i class="fas fa-briefcase"></i>
 								<h3>Full-Stack Developer</h3>
 								<h4>Company: <span class="blur">Company 3</span></h4>
 								<h4>Duration: <span class="blur">Mnt 20XX to Mnt 20XX</span> (~1 year)</h4>
@@ -123,7 +105,7 @@
 									tincidunt, eget elementum diam vehicula.</p>
 							</div>
 							<div class="timeline-item">
-								<i class="fa-solid fa-briefcase"></i>
+								<i class="fas fa-briefcase"></i>
 								<h3>Full-Stack Developer</h3>
 								<h4>Company: <span class="blur">Company 4</span></h4>
 								<h4>Duration: <span class="blur">Mnt 20XX</span> to Current (~6 months)</h4>
@@ -141,7 +123,7 @@
 						<h2>Education</h2>
 						<div class="timeline">
 							<div class="timeline-item">
-								<i class="fa-solid fa-graduation-cap"></i>
+								<i class="fas fa-graduation-cap"></i>
 								<h3>Bachelor in Information Systems</h3>
 								<h4>University: Pontifical Catholic University of Minas Gerais</h4>
 								<h4>Duration: Feb 2014 to Nov 2017</h4>
@@ -149,7 +131,7 @@
 									justo nec posuere pretium. </p>
 							</div>
 							<div class="timeline-item">
-								<i class="fa-solid fa-graduation-cap"></i>
+								<i class="fas fa-graduation-cap"></i>
 								<h3>Post-graduation in Software Engineering</h3>
 								<h4>University: Pontifical Catholic University of Minas Gerais</h4>
 								<h4>Duration: Mar 2018 to Nov 2019</h4>
@@ -157,7 +139,7 @@
 									justo nec posuere pretium. </p>
 							</div>
 							<div class="timeline-item">
-								<i class="fa-solid fa-stamp"></i>
+								<i class="fas fa-stamp"></i>
 								<h3>Certified Scrum Master</h3>
 								<h4>Expeditor: Scrum Alliance</h4>
 								<h4>Date: 2018</h4>
@@ -165,28 +147,28 @@
 									Nunc finibus libero et lacus luctus, ac imperdiet nulla ornare.</p>
 							</div>
 							<div class="timeline-item">
-								<i class="fa-solid fa-stamp"></i>
+								<i class="fas fa-stamp"></i>
 								<h3>Certified Scrum Developer</h3>
 								<h4>Expeditor: Scrum Alliance</h4>
 								<h4>Date: 2018</h4>
 								<p>Suspendisse sit amet scelerisque enim, eget aliquam est.</p>
 							</div>
 							<div class="timeline-item">
-								<i class="fa-solid fa-certificate"></i>
+								<i class="fas fa-certificate"></i>
 								<h3>Exam 486: ASP.NET MVC Web Applications</h3>
 								<h4>Expeditor: Microsoft</h4>
 								<h4>Date: 2019</h4>
 								<p>Suspendisse sit amet scelerisque enim, eget aliquam est.</p>
 							</div>
 							<div class="timeline-item">
-								<i class="fa-solid fa-certificate"></i>
+								<i class="fas fa-certificate"></i>
 								<h3>Exam 480: HTML4 with Javascript and CSS3</h3>
 								<h4>Expeditor: Microsoft</h4>
 								<h4>Date: 2019</h4>
 								<p>Suspendisse sit amet scelerisque enim, eget aliquam est.</p>
 							</div>
 							<div class="timeline-item">
-								<i class="fa-solid fa-stamp"></i>
+								<i class="fas fa-stamp"></i>
 								<h3>MSCA: Web Applications</h3>
 								<h4>Expeditor: Microsoft</h4>
 								<h4>Date: 2019</h4>
@@ -198,202 +180,25 @@
 			</div>
 		</article>
 		<article class="skills">
+			<h1 class="text-center"><i class="fas fa-tools"></i>Skills<a class="anchor" id="skills"></a></h1>
 			<section id="timeline">
-				<h1 class="text-center"><i class="fa-solid fa-wrench"></i>Skills<a class="anchor" id="skills"></a></h1>
 				<canvas id="experience-timeline-canvas"></canvas>
 			</section>
 		</article>
 		<article class="projects">
+			<h1 class="text-center"><i class="far fa-folder-open"></i>Projects<a class="anchor" id="projects"></a></h1>
 			<section id="timeline">
-				<h1 class="text-center"><i class="fa-solid fa-folder-open"></i>Projects<a class="anchor" id="projects"></a></h1>
 				<canvas></canvas>
 			</section>
 		</article>
 		<article class="contact">
+			<h1 class="text-center"><i class="far fa-paper-plane"></i>Contact<a class="anchor" id="contact"></a></h1>
 			<section id="timeline">
-				<h1 class="text-center"><i class="fa-solid fa-rectangle-list"></i>Contact<a class="anchor" id="contact"></a></h1>
 				<canvas></canvas>
 			</section>
 		</article>
 
 	</main>
-	<script type="text/javascript">
-		let currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? "DARK" : "LIGHT";
-		const COLORS = {
-			LIGHT: {
-				FONT_COLOR: '#777777',
-				GRID: '#e8e8e8',
-				BARS: {
-					BACKEND_AND_FRAMEWORKS: 'rgb(100,230,150)',
-					FRONTEND_AND_FRAMEWORKS: 'rgb(255,155,125)',
-					DATABASE: 'rgb(175,160,230)',
-					CLOUD: 'rgb(255,210,145)',
-					PM_FRAMEWORKS: 'rgb(255,165,255)',
-					OTHERS: 'rgb(125,200,215)',
-				}
-			},
-			DARK: {
-				FONT_COLOR: 'darkgray',
-				GRID: '#525252',
-				BARS: {
-					BACKEND_AND_FRAMEWORKS: 'rgb(55,115,80)',
-					FRONTEND_AND_FRAMEWORKS: 'rgb(145,70,50)',
-					DATABASE: 'rgb(60,65,120)',
-					CLOUD: 'rgb(196,122,83)',
-					PM_FRAMEWORKS: 'rgb(115,55,115)',
-					OTHERS: 'rgb(55,105,115)',
-				}
-			},
-		}
-
-		$(document).ready(function () {
-			addExperience();
-		});
-
-		function addExperience(state) {
-			const ctx = document.getElementById("experience-timeline-canvas").getContext('2d');
-
-			let params = {
-				type: "bar",
-				data: {
-					labels: ['C#', 'Windows Form', '.NET Framework', 'ASP.NET MVC', '.NET Core', 'Javascript', 'Node.js', 'HTML/CSS', 'Angular', 'Vue', 'React', 'SQL', 'MongoDB', 'Aerospike', 'Postgres', 'Azure', 'AWS', 'Scrum', 'Kanban', 'ShapeUp', 'Docker'],
-					datasets: [{
-						data: [
-							[moment(new Date(2015, 0, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //C#
-							[moment(new Date(2015, 0, 1)).valueOf(), moment(new Date(2018, 0, 1)).valueOf()], //Windows Form
-							[moment(new Date(2015, 0, 1)).valueOf(), moment(new Date(2020, 10, 1)).valueOf()], //.NET Framework
-							[moment(new Date(2017, 0, 1)).valueOf(), moment(new Date(2020, 10, 1)).valueOf()], //ASP.NET MVC
-							[moment(new Date(2018, 0, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //.NET Core
-							[moment(new Date(2017, 0, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //Javascript
-							[moment(new Date(2020, 10, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //Node.js
-							[moment(new Date(2017, 0, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //HTML/CSS
-							[moment(new Date(2020, 10, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //Angular
-							[moment(new Date(2021, 3, 1)).valueOf(), moment(new Date(2022, 3, 1)).valueOf()], //Vue
-							[moment(new Date(2021, 3, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], // React
-							[moment(new Date(2015, 0, 1)).valueOf(), moment(new Date(2021, 10, 1)).valueOf()], //SQL
-							[moment(new Date(2020, 10, 1)).valueOf(), moment(new Date(2021, 10, 1)).valueOf()], //MongoDB
-							[moment(new Date(2021, 3, 1)).valueOf(), moment(new Date(2022, 3, 1)).valueOf()], //Aerospike
-							[moment(new Date(2021, 3, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], // Postgres
-							[moment(new Date(2016, 0, 1)).valueOf(), moment(new Date(2021, 10, 1)).valueOf()], //Azure
-							[moment(new Date(2021, 3, 1)).valueOf(), moment(new Date()).valueOf().valueOf()], //AWS
-							[moment(new Date(2016, 5, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //Scrum
-							[moment(new Date(2018, 8, 1)).valueOf(), moment(new Date(2020, 10, 1)).valueOf()], //Kanban
-							[moment(new Date(2022, 7, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //ShapeUp
-							[moment(new Date(2021, 3, 1)).valueOf(), moment(new Date()).valueOf().valueOf()], //Docker
-						],
-						backgroundColor: [
-							COLORS[currentTheme].BARS.BACKEND_AND_FRAMEWORKS,
-							COLORS[currentTheme].BARS.BACKEND_AND_FRAMEWORKS,
-							COLORS[currentTheme].BARS.BACKEND_AND_FRAMEWORKS,
-							COLORS[currentTheme].BARS.BACKEND_AND_FRAMEWORKS,
-							COLORS[currentTheme].BARS.BACKEND_AND_FRAMEWORKS,
-							COLORS[currentTheme].BARS.BACKEND_AND_FRAMEWORKS,
-							COLORS[currentTheme].BARS.BACKEND_AND_FRAMEWORKS,
-							COLORS[currentTheme].BARS.FRONTEND_AND_FRAMEWORKS,
-							COLORS[currentTheme].BARS.FRONTEND_AND_FRAMEWORKS,
-							COLORS[currentTheme].BARS.FRONTEND_AND_FRAMEWORKS,
-							COLORS[currentTheme].BARS.FRONTEND_AND_FRAMEWORKS,
-							COLORS[currentTheme].BARS.DATABASE,
-							COLORS[currentTheme].BARS.DATABASE,
-							COLORS[currentTheme].BARS.DATABASE,
-							COLORS[currentTheme].BARS.DATABASE,
-							COLORS[currentTheme].BARS.CLOUD,
-							COLORS[currentTheme].BARS.CLOUD,
-							COLORS[currentTheme].BARS.PM_FRAMEWORKS,
-							COLORS[currentTheme].BARS.PM_FRAMEWORKS,
-							COLORS[currentTheme].BARS.PM_FRAMEWORKS,
-							COLORS[currentTheme].BARS.OTHERS,
-						],
-						borderWidth: 0,
-						label: "Duration"
-					}]
-				},
-				options: {
-					responsive: true,
-					maintainAspectRatio: false,
-					indexAxis: 'y',
-					plugins: {
-						title: {
-							display: false,
-						},
-						tooltip: {
-							position: 'average',
-							yAlign: 'bottom',
-							xAlign: 'center',
-							callbacks: {
-								label: tooltipItem => `${getExperience(tooltipItem.raw[0], tooltipItem.raw[1])} (${getReadbleRange(tooltipItem.raw[0], tooltipItem.raw[1])})`
-							}
-						},
-						legend: {
-							display: false
-						},
-						tooltips: {
-							enabled: true
-						}
-					},
-					scales: {
-						y: {
-							ticks: {
-								color: COLORS[currentTheme].FONT_COLOR
-							},
-							grid: {
-								color: COLORS[currentTheme].GRID
-							}
-						},
-						x: {
-							type: 'linear',
-							position: 'left',
-							min: moment(new Date(2015, 0, 1)).valueOf(),
-							max: moment(new Date().setHours(0, 0, 0, 0)).valueOf(),
-							ticks: {
-								color: COLORS[currentTheme].FONT_COLOR,
-								beginAtZero: false,
-								callback: value => getFormattedDateFromEpoch(value)
-							},
-							grid: {
-								color: COLORS[currentTheme].GRID
-							}
-						},
-					},
-				}
-			};
-
-			let newChart = new Chart(ctx, params);
-		}
-
-		function getReadbleRange(start, end) {
-			const readbleStart = getFormattedDateFromEpoch(start);
-			const readbleEnd = getFormattedDateFromEpoch(end);
-			if (readbleEnd === "Today") return `Since ${readbleStart}`;
-
-			return `From ${readbleStart} until ${readbleEnd}`;
-		}
-
-		function getFormattedDateFromEpoch(epoch) {
-			let date = moment(epoch);
-			if (date == moment(new Date().setHours(0, 0, 0, 0)).valueOf()) return "Today";
-			return date.format('MMM of YYYY');
-		}
-
-		function getExperience(start, end) {
-			var readbleExperience = "";
-			var daysDiff = (end - start) / 86400000;
-			if (daysDiff > 364) {
-				let years = Math.floor(daysDiff / 365);
-				readbleExperience += `${years} years`;
-				daysDiff -= years * 365;
-			}
-			if (daysDiff > 30) {
-				let months = Math.floor(daysDiff / 30);
-				if (readbleExperience) readbleExperience += " and ";
-				readbleExperience += `${months} months`;
-				daysDiff -= months * 30;
-			}
-			if (!readbleExperience) readbleExperience = "Just starting :)";
-
-			return readbleExperience;
-		}
-	</script>
 </body>
 
 </html>
