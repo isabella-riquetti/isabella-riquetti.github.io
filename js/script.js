@@ -1,12 +1,12 @@
 
 $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
+    if ($(this).scrollTop() > 75) {
         $('.instructions').css('color', '#7c2a67');
     } else {
         $('.instructions').css('color', 'white');
     }
 
-    if ($(this).scrollTop() > (window.innerHeight - (window.innerHeight/5))) {
+    if ($(this).scrollTop() > 175) {
         $('.instructions').fadeOut('slow');
     } else {
         $('.instructions').fadeIn('slow');

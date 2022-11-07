@@ -3,6 +3,12 @@ nav {
     top: 0;
     width: 100%;
     display: none;
+    z-index: 1030;
+    box-shadow: 0 0.2rem 0.8rem rgb(124 42 103 / 41%);
+}
+
+nav a {
+    border: 0 !important;
 }
 
 #mobile-menu {
@@ -61,14 +67,22 @@ nav {
     align-items: center;
     text-align: center;
     height: 100px;
-    background-color: white;
-    color: #7c2a67;
+    background-color: #7c2a67;
+    color: white;
     font-family: 'Share Tech Mono', monospace;
-    font-size: 20px;
+    font-size: 25px;
+    text-transform: uppercase;
 }
 
 #desktop-menu a {
-    margin: 0 15px;
+    margin: 0 20px;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -190px;
+    visibility: hidden;
 }
 
 @media only screen and (max-width: 600px) {
@@ -77,6 +91,10 @@ nav {
     }
     #desktop-menu {
         display: none;
+    }
+
+    a.anchor {
+        top: -70px;
     }
 }
 

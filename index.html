@@ -48,7 +48,7 @@
 <body>
 	<nav>
 		<div id="desktop-menu">
-			<a href="#experience" class="nav-item nav-link">Experience</a>
+			<a href="#qualifications" class="nav-item nav-link">Qualifications</a>
 			<a href="#skills" class="nav-item nav-link">Skills</a>
 			<a href="#home" class="nav-item nav-link active"><i class="fa-solid fa-house"></i></a>
 			<a href="#projects" class="nav-item nav-link">Projects</a>
@@ -58,7 +58,7 @@
 			<a href="javascript:void(0);" class="menu menu-icon" onclick="toggleMenu()"><span></span></a>
 			<div id="mobile-menu-options">
 				<a class="mobile-menu-item" href="#home" class="nav-item nav-link active">Home</a>
-				<a class="mobile-menu-item" href="#experience" class="nav-item nav-link">Experience</a>
+				<a class="mobile-menu-item" href="#qualifications" class="nav-item nav-link">Qualifications</a>
 				<a class="mobile-menu-item" href="#skills" class="nav-item nav-link">Skills</a>
 				<a class="mobile-menu-item" href="#projects" class="nav-item nav-link">Projects</a>
 				<a class="mobile-menu-item" href="#contact" class="nav-item nav-link">Contact</a>
@@ -66,8 +66,9 @@
 		</div>
 	</nav>
 	<main role="main" class="wrapper">
-		<article id="home">
+		<article class="home">
 			<section>
+				<a class="anchor" id="home"></a>
 				<h1>Isabella Emidio</h1>
 				<div class="typing-container">
 					<span id="type-text"></span>
@@ -84,21 +85,21 @@
 				<canvas></canvas>
 			</section>
 		</article>
-		<article id="skills">
+		<article class="skills">
 			<section id="timeline">
-				<h1><i class="fa-solid fa-wrench"></i>Skills</h1>
+				<h1 class="text-center"><i class="fa-solid fa-wrench"></i>Skills<a class="anchor" id="skills"></a></h1>
 				<canvas id="experience-timeline-canvas"></canvas>
 			</section>
 		</article>
-		<article id="projects">
+		<article class="projects">
 			<section id="timeline">
-				<h1><i class="fa-solid fa-folder-open"></i>Projects</h1>
+				<h1 class="text-center"><i class="fa-solid fa-folder-open"></i>Projects<a class="anchor" id="projects"></a></h1>
 				<canvas></canvas>
 			</section>
 		</article>
-		<article id="contact">
+		<article class="contact">
 			<section id="timeline">
-				<h1><i class="fa-solid fa-rectangle-list"></i>Contact</h1>
+				<h1 class="text-center"><i class="fa-solid fa-rectangle-list"></i>Contact<a class="anchor" id="contact"></a></h1>
 				<canvas></canvas>
 			</section>
 		</article>
@@ -259,7 +260,7 @@
 		function getFormattedDateFromEpoch(epoch) {
 			let date = moment(epoch);
 			if (date == moment(new Date().setHours(0, 0, 0, 0)).valueOf()) return "Today";
-			return date.format('MMMM of YYYY');
+			return date.format('MMM of YYYY');
 		}
 
 		function getExperience(start, end) {
