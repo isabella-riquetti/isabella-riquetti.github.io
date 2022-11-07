@@ -11,23 +11,17 @@ nav a {
     border: 0 !important;
 }
 
-#mobile-menu {
+.options {
     padding-left: 10px;
-    display: none;
     font-family: 'Share Tech Mono', monospace;
     font-size: 20px;
     text-transform: uppercase;
-}
-
-#mobile-menu-options {
-    display: none;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     width: 100%;
-    height: 100vh;
 }
 
-#mobile-menu-options a {
+.options a {
     display: inline-flex;
     align-items: center;
     height: 60px;
@@ -36,7 +30,7 @@ nav a {
     text-decoration: none;
 }
 
-.menu, #desktop-menu {
+.menu {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -52,7 +46,7 @@ nav a {
     color: white;
 }
 
-#desktop-menu a {
+.options a {
     margin: 0 20px;
 }
 
@@ -61,36 +55,6 @@ a.anchor {
     position: relative;
     top: -190px;
     visibility: hidden;
-}
-
-@media only screen and (max-width: 600px) {
-    #mobile-menu {
-        display: block;
-    }
-    #desktop-menu {
-        display: none;
-    }
-
-    a.anchor {
-        top: -70px;
-    }
-    .menu {
-        height: 0px;
-    }
-    
-    .open#mobile-menu {
-        display: block;
-        position: fixed;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        color: white;
-        background-color: #7c2a67;
-    }
-
-    .open #mobile-menu-options {
-        display: flex;
-    }
 }
 
 .menu span {
@@ -114,34 +78,85 @@ a.anchor {
 .menu span:after {
 	margin-top: 12px;
 }
-.menu-icon span {
+.mobile-menu-icon span {
 	-webkit-transition-duration: 0s; transition-duration: 0s;
 	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
 }
 
-.open .menu-icon span {
+.open .mobile-menu-icon span {
 	background-color: transparent !important;
 	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
 }
-.menu-icon span:before {
+.mobile-menu-icon span:before {
 	-webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
 	-webkit-transition-duration: 0.2s; transition-duration: 0.2s;
 	-webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;
 }
-.open .menu-icon span:before {
+.open .mobile-menu-icon span:before {
 	margin-top: 0;
     background-color: white;
 	-webkit-transform: rotate(45deg); transform: rotate(45deg);
 	-webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
 }
-.menu-icon span:after {
+.mobile-menu-icon span:after {
 	-webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
 	-webkit-transition-duration: 0.2s; transition-duration: 0.2s;
 	-webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;
 }
-.open .menu-icon span:after {
+.open .mobile-menu-icon span:after {
 	margin-top: 0;
     background-color: white;
 	-webkit-transform: rotate(-45deg); transform: rotate(-45deg);
 	-webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    a.anchor {
+        top: -70px;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .menu {
+        height: 0px;
+    }
+
+    .menu .options {
+        display: none;
+    }
+    
+    .menu.open {
+        display: flex;
+        align-items: flex-start;
+        position: fixed;
+        flex-direction: column;
+        justify-content: flex-start;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        color: white;
+        background-color: #7c2a67;
+    }
+
+    .menu.open .options {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    body .menu.open .mobile-menu-icon span:before {
+        background-color: white;
+        -webkit-transform: rotate(45deg); transform: rotate(45deg);
+        -webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+    }
+    body .menu.open .mobile-menu-icon span:after {
+        background-color: white;
+        -webkit-transform: rotate(-45deg); transform: rotate(-45deg);
+        -webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+    }
 }

@@ -17,6 +17,7 @@ body.dark .timeline {
 }
 
 @media only screen and (max-width: 600px) {
+
     body.dark .menu span,
     body.dark .menu span:before,
     body.dark .menu span:after {
@@ -43,13 +44,99 @@ body.light .timeline {
 }
 
 @media only screen and (max-width: 600px) {
+
     body.light .menu span,
     body.light .menu span:before,
     body.light .menu span:after {
         background-color: #7c2a67;
     }
+
     body.light .open .menu span:before,
     body.light .open .menu span:after {
         background-color: white;
     }
+    .themes {
+        display: none;
+    }
+    .open .themes {
+        display: flex;
+        margin: 20px 0;
+        align-self: center;
+    }
+}
+
+
+/* Checkbox */
+body.dark .button {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin: 25px;
+    height: 200px;
+    width: 200px;
+    background-color: #2d2d2d;
+    font-size: 60px;
+    border-radius: 50px;
+    box-shadow: -8px -8px 12px 0px rgba(255, 255, 255, 0.05), 12px 12px 16px 0px rgba(0, 0, 0, 0.5);
+}
+
+.switch {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 50px;
+    position: relative;
+    width: 50px;
+    height: 26px;
+}
+
+.ball {
+    background-color: #7c2a67;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.label .ball {
+    transform: translateX(24px);
+}
+
+.checkbox:checked+.label {
+    background-color: #212121;
+}
+
+.fa-moon {
+    color: white;
+}
+
+.fa-sun {
+    color: #7c2a67;
+}
+
+.themes {
+    font-size: 16px;
+    margin-right: 15px;
+}
+.themes label {
+    cursor: pointer;
 }

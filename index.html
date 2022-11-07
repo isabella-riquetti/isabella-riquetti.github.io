@@ -9,9 +9,9 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 	<link rel="stylesheet" href="./assets/css/all.min.css" />
+	<link rel="stylesheet" href="./assets/css/theme.css" />
 	<link rel="stylesheet" href="./assets/css/typing.css" />
 	<link rel="stylesheet" href="./assets/css/menu.css" />
-	<link rel="stylesheet" href="./assets/css/theme.css" />
 	<link rel="stylesheet" href="./assets/style.css" />
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
@@ -26,24 +26,27 @@
 	<script src="./assets/js/skills.js"></script>
 	<script src="./assets/script.js"></script>
 </head>
+
 <body class="light">
 	<nav>
 		<div class="menu">
-			<div id="desktop-menu">
+			<a href="javascript:void(0);" class="mobile-menu-icon" onclick="toggleMenu()"><span></span></a>
+			<div class="options">
+				<a href="#home" class="nav-item nav-link mobile-only">Home</a>
 				<a href="#qualifications" class="nav-item nav-link">Qualifications</a>
 				<a href="#skills" class="nav-item nav-link">Skills</a>
-				<a href="#home" class="nav-item nav-link active"><i class="fas fa-home"></i></a>
+				<a href="#home" class="nav-item nav-link desktop-only"><i class="fas fa-home"></i></a>
 				<a href="#projects" class="nav-item nav-link">Projects</a>
 				<a href="#contact" class="nav-item nav-link">Contact</a>
 			</div>
-			<div id="mobile-menu">
-				<a href="javascript:void(0);" class="menu menu-icon" onclick="toggleMenu()"><span></span></a>
-				<div id="mobile-menu-options">
-					<a class="mobile-menu-item" href="#home" class="nav-item nav-link active">Home</a>
-					<a class="mobile-menu-item" href="#qualifications" class="nav-item nav-link">Qualifications</a>
-					<a class="mobile-menu-item" href="#skills" class="nav-item nav-link">Skills</a>
-					<a class="mobile-menu-item" href="#projects" class="nav-item nav-link">Projects</a>
-					<a class="mobile-menu-item" href="#contact" class="nav-item nav-link">Contact</a>
+			<div class="themes">
+				<div class="switch">
+					<input type="checkbox" class="checkbox" id="checkbox">
+					<label for="checkbox" class="label">
+						<i class="far fa-moon"></i>
+						<i class="far fa-sun"></i>
+						<div class="ball"></div>
+					</label>
 				</div>
 			</div>
 		</div>
@@ -57,12 +60,14 @@
 					<span class="input-cursor"></span>
 				</div>
 				<div class="instructions">
-					<button onclick="document.getElementById('qualifications').scrollIntoView();"><i class="fas fa-caret-down"></i></button>
+					<button onclick="document.getElementById('qualifications').scrollIntoView();"><i
+							class="fas fa-caret-down"></i></button>
 				</div>
 			</section>
 		</article>
 		<article class="qualifications" style="height: 100%">
-			<h1 class="text-center"><i class="fas fa-scroll"></i>Qualifications<a class="anchor" id="qualifications"></a></h1>
+			<h1 class="text-center"><i class="fas fa-scroll"></i>Qualifications<a class="anchor"
+					id="qualifications"></a></h1>
 			<div class="container">
 				<div class="row">
 					<section class="col-md-6">

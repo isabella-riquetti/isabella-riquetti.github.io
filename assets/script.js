@@ -25,9 +25,9 @@ $(window).ready(function() {
 });
 
 function toggleMenu() {
-    $("#mobile-menu").toggleClass("open");
+    $(".menu").toggleClass("open");
 }
 
-$(document).on("click",".mobile-menu-item", function(){
-    $("#mobile-menu").removeClass("open");
+$(document).on("click",".options .nav-item", function(){
+    $(".menu").removeClass("open");
 });

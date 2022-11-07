@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 h1 {
     font-family: 'Share Tech Mono', monospace;
     margin: 40px;
     text-transform: uppercase;
 }
 
-h2 {  
+h2 {
     font-family: 'Share Tech Mono', monospace;
 }
 
@@ -31,6 +35,10 @@ article {
 
 i {
     background-color: transparent;
+}
+
+.mobile-only {
+    display: none !important;
 }
 
 .blur {
@@ -101,14 +109,14 @@ i {
 .timeline {
     border-left: 1px solid #7c2a67;
     padding-left: 20px;
-} 
+}
 
 .timeline-item {
     position: relative;
 }
 
 
-.timeline i {   
+.timeline i {
     position: absolute;
     left: -29px;
     background-color: white;
@@ -119,5 +127,16 @@ i {
 @media only screen and (max-width: 600px) {
     .qualifications {
         margin: 0 10px
+    }
+
+    .mobile-only {
+        display: block !important;
+    }
+    .menu a.mobile-only {
+        display: inline-flex !important;
+    }
+
+    .desktop-only {
+        display: none !important;
     }
 }

@@ -1,3 +1,4 @@
+let mySkills;
 const COLORS = {
     LIGHT: {
         FONT_COLOR: '#777777',
@@ -25,7 +26,10 @@ const COLORS = {
     },
 }
 
-function addExperience(state) {
+function addExperience() {
+    if(mySkills) {
+        mySkills.destroy();
+    }
     const currentTheme = getCurrentTheme().toUpperCase();
     const ctx = document.getElementById("experience-timeline-canvas").getContext('2d');
 
@@ -134,7 +138,7 @@ function addExperience(state) {
         }
     };
 
-    new Chart(ctx, params);
+    mySkills = new Chart(ctx, params);
 }
 
 function getReadbleRange(start, end) {
