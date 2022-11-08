@@ -12,6 +12,10 @@ nav a {
     border: 0 !important;
 }
 
+.menu a {
+    z-index: 3;
+}
+
 .menu a i {
     margin-right: 15px;
 }
@@ -27,6 +31,7 @@ nav a {
     width: 100%;
     display: flex;
     justify-content: center;
+    height: 100%;
 }
 
 .options a {
@@ -36,16 +41,7 @@ nav a {
     font-size: 30px;
     color: white;
     text-decoration: none;
-}
-
-.nav-bg {
-    display: none;
-    position: fixed;
-    bottom: -80px;
-    border-radius: 50%;
-    width: 160px;
-    height: 160px;
-    transition: all 0.5s cubic-bezier(0.6, 0, 0.3, 0.8);
+    margin: 0 20px;
 }
 
 .mobile-menu-icon {
@@ -56,20 +52,14 @@ nav a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 0px;
-    transition: all 0.7s ease-in-out;
+    height: 100px;
     width: 100%;
-}
-
-
-.options a {
-    margin: 0 20px;
 }
 
 a.anchor {
     display: block;
     position: relative;
-    top: -140px;
+    top: -190px;
     visibility: hidden;
 }
 
@@ -97,50 +87,28 @@ a.anchor {
     transition-delay: 0s, 0.2s;
 }
 
-.mobile-menu-icon span:after {
-    -webkit-transition-property: margin, -webkit-transform;
-    transition-property: margin, transform;
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s;
-    -webkit-transition-delay: 0.2s, 0s;
-    transition-delay: 0.2s, 0s;
-}
-
-.open .mobile-menu-icon span:after {
-    margin-top: 0;
-    background-color: white;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    -webkit-transition-delay: 0s, 0.2s;
-    transition-delay: 0s, 0.2s;
-}
-
-.mobile-menu-icon {
-    display: flex;
-    justify-content: center;
-}
-
 .themes {
     display: inline-flex;
     position: fixed;
     right: 15px;
-    top: 15px;
+    top: 35px;
+    z-index: 2;
+}
+
+.nav-bg {
+    display: none;
 }
 
 @media only screen and (max-width: 600px) {
-    
-    .closed .themes {
-        top: 100vh;
-        transition: all 0.25s ease-in-out;
-    }
-    .open .themes {
-        top: 15px;
-        transition: all 0.6s ease-in-out;
-    }
 
     a.anchor {
         top: -70px;
-    }      
+    }   
+
+    .menu {
+        height: 0;
+        transition: all 0.7s cubic-bezier(1, 0, 1, 1);
+    }    
 
     .menu span {
         display: initial;
@@ -179,6 +147,24 @@ a.anchor {
         transition-delay: 0.2s;
     }
 
+    .mobile-menu-icon span:after {
+        -webkit-transition-property: margin, -webkit-transform;
+        transition-property: margin, transform;
+        -webkit-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+        -webkit-transition-delay: 0.2s, 0s;
+        transition-delay: 0.2s, 0s;
+    }
+    
+    .open .mobile-menu-icon span:after {
+        margin-top: 0;
+        background-color: white;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transition-delay: 0s, 0.2s;
+        transition-delay: 0s, 0.2s;
+    }
+
     .mobile-menu-icon {
         display: flex;
         justify-content: center;
@@ -193,6 +179,16 @@ a.anchor {
         bottom: -80px;
         background-color: transparent;
     }
+    
+    .closed .themes {
+        top: 100vh;
+        transition: all 0.6s cubic-bezier(0.5, 0, 0.5, 0.5);
+    }
+    .open .themes {
+        top: 15px;
+        transition: all 0.8s cubic-bezier(0.5, 0, 0.5, 0.5);
+        transition-delay: 0.15s;
+    }
 
     .options {
         background-color: transparent;
@@ -202,29 +198,33 @@ a.anchor {
         z-index: 1;
         position: fixed;
         top: 100vh;
-        transition: all 0.25s ease-in-out;
+        transition: all 0.8s cubic-bezier(0.5, 0, 0.5, 0.5);
     }
 
     .menu.open {
         color: white;
         height: 100vh;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.8s cubic-bezier(0.5, 0, 0.5, 0.5);
     }
 
     .nav-bg {
         display: initial;
+        position: fixed;
+        bottom: -80px;
+        border-radius: 50%;
+        width: 160px;
+        height: 160px;
+        transition: all 0.8s cubic-bezier(0.5, 0, 0.5, 0.5);
     }
 
     .open .nav-bg {
         background: #7c2a67;
-        width: calc(100vw + 100vh);
-        height: calc(100vw + 100vh);
-        transition: all 0.5s ease-in-out;
+        transition: all 0.8s cubic-bezier(0.5, 0, 0.5, 0.5);
     }
 
     .menu.open .options {
-        top: 15px;
-        transition: all 0.5s ease-in-out;
+        top: 1px;
+        transition: all 0.8s cubic-bezier(0.5, 0, 0.5, 0.5);
     }
 
     body .menu.open .mobile-menu-icon span:before {
