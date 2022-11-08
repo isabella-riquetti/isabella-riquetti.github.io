@@ -1,7 +1,7 @@
 /* Dark */
 body.dark {
     background-color: #2d2d2d;
-    color: white;
+    color: #e7e9eb;
 }
 
 body.dark .timeline-item i {
@@ -9,20 +9,27 @@ body.dark .timeline-item i {
 }
 
 body.dark .blur {
-    text-shadow: 0 0 8px white;
+    text-shadow: 0 0 8px #e7e9eb;
 }
 
 body.dark .timeline {
-    border-color: white;
+    border-color: #e7e9eb;
 }
 
-@media only screen and (max-width: 600px) {
+body.dark .nav-bg {
+    background-color: #e7e9eb;
+}
 
-    body.dark .menu span,
-    body.dark .menu span:before,
-    body.dark .menu span:after {
-        background-color: white;
-    }
+body.dark .open .nav-bg {
+    background-color: #7c2a67;
+}
+
+body.dark .menu a span, body.dark .menu a span::before, body.dark .menu a span:after {
+    background-color: #2d2d2d;
+}
+
+body.dark .menu.open a span {
+    background-color: #e7e9eb;
 }
 
 /* Light */
@@ -43,25 +50,16 @@ body.light .timeline {
     border-color: #7c2a67;
 }
 
+body.light .nav-bg {
+    background: #7c2a67;
+}
+
 @media only screen and (max-width: 600px) {
-
-    body.light .menu span,
-    body.light .menu span:before,
-    body.light .menu span:after {
-        background-color: #7c2a67;
-    }
-
-    body.light .open .menu span:before,
-    body.light .open .menu span:after {
-        background-color: white;
-    }
     .themes {
         display: none;
     }
-    .open .themes {
-        display: flex;
-        margin: 20px 0;
-        align-self: center;
+    .menu {
+        background-color: white;
     }
 }
 
@@ -135,7 +133,6 @@ body.dark .button {
 
 .themes {
     font-size: 16px;
-    margin-right: 15px;
 }
 .themes label {
     cursor: pointer;
