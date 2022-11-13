@@ -4,6 +4,10 @@ body.dark {
     color: #e7e9eb;
 }
 
+body.light h3>a {
+    color: white;
+}
+
 body.dark .timeline-item i {
     background-color: #2d2d2d;
 }
@@ -35,6 +39,10 @@ body.dark .menu.open a span {
 /* Light */
 body.light {
     background-color: white;
+    color: #7c2a67;
+}
+
+body.light h3>a {
     color: #7c2a67;
 }
 
