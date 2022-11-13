@@ -12,18 +12,23 @@ $(window).scroll(function () {
         $('.instructions button').fadeIn('slow');
     }
     
+    toggleHeader();
+});
+
+$(window).ready(function() {
+    updateCurrentTheme();
+    addExperience();
+    toggleHeader();
+});
+
+function toggleHeader() {
     let fadePosition = window.innerWidth > 600 ? window.innerHeight-350 : 200;
     if ($(this).scrollTop() > fadePosition) {
         $('nav').fadeIn('slow');
     } else {
         $('nav').fadeOut('slow');
     }
-});
-
-$(window).ready(function() {
-    updateCurrentTheme();
-    addExperience();
-});
+}
 
 function toggleMenu() {
     $(".menu").toggleClass("open");

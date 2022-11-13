@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+nav {
+    display: none;
+}
+
 h1 {
     font-family: 'Share Tech Mono', monospace;
     margin: 40px;
