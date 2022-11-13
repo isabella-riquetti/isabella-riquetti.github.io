@@ -132,6 +132,7 @@ i {
     .mobile-only {
         display: block !important;
     }
+
     .menu a.mobile-only {
         display: inline-flex !important;
     }
@@ -139,4 +140,48 @@ i {
     .desktop-only {
         display: none !important;
     }
+}
+
+
+/* Footer */
+footer {
+    background-color: #7c2a67;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-size: 20px;
+}
+
+footer a {
+    border: 0;
+    background-color: white;
+    color: #7c2a67;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    border: 0;
+    background-color: white;
+    color: #7c2a67;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+footer a:hover {
+    background-color: rgb(255 255 255 / 10%);
+    border: 3px solid white;
+    color: white;
 }
