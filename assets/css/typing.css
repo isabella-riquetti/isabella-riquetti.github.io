@@ -1,9 +1,10 @@
-.typing-container {
+.typing {
     padding: 10px;
     display: block;
     height: 1em;
+    font-size: 35px;
 }
-#type-text {
+.type-text {
     margin-left: 8px;
     letter-spacing: 6px;
 }
@@ -16,6 +17,10 @@
     margin-left: 6px;
     margin-bottom: -5px;
     animation: blink .6s linear infinite alternate;
+}
+
+.keywords {
+    display: none;
 }
 
 @keyframes blink {
