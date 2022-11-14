@@ -36,6 +36,10 @@ body.dark .menu.open a span {
     background-color: #e7e9eb;
 }
 
+body.dark .soon .input-cursor {
+    background-color: white;
+}
+
 /* Light */
 body.light {
     background-color: white;
@@ -60,6 +64,10 @@ body.light .timeline {
 
 body.light .nav-bg {
     background: #7c2a67;
+}
+
+body.light .soon .input-cursor {
+    background-color: #7c2a67;
 }
 
 @media only screen and (max-width: 600px) {

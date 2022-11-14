@@ -189,3 +189,11 @@ footer a:hover {
     border: 3px solid white;
     color: white;
 }
+
+/* soon */
+.soon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 300px);
+}
