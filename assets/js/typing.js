@@ -3,7 +3,6 @@
 $(document).ready(async function () {
   carousel(".typing-roles");
   carousel(".typing-soon-projects");
-  carousel(".typing-soon-contact");
 });
 
 
