@@ -113,7 +113,7 @@ a.anchor {
     .menu span {
         display: initial;
         position: fixed;
-        bottom: 40px;
+        top: 40px;
     }
 
     .menu span:before,
@@ -176,29 +176,30 @@ a.anchor {
         align-items: center;
         justify-content: center;
         position: fixed;
-        bottom: -80px;
+        top: -80px;
         background-color: transparent;
     }
     
     .closed .themes {
-        top: 100vh;
+        top: -100px;
         transition: all 0.6s cubic-bezier(0.5, 0, 0.5, 0.5);
     }
     .open .themes {
-        top: 15px;
+        top: calc(100vh - 45px);
         transition: all 0.8s cubic-bezier(0.5, 0, 0.5, 0.5);
         transition-delay: 0.15s;
     }
 
     .options {
         background-color: transparent;
-        display: initial;
+        display: flex;
         text-align: center;
         flex-direction: column;
         z-index: 1;
         position: fixed;
-        top: 100vh;
+        top: -100vh;
         transition: all 0.8s cubic-bezier(0.5, 0, 0.5, 0.5);
+        justify-content: flex-end;
     }
 
     .menu.open {
@@ -210,7 +211,7 @@ a.anchor {
     .nav-bg {
         display: initial;
         position: fixed;
-        bottom: -80px;
+        top: -80px;
         border-radius: 50%;
         width: 160px;
         height: 160px;

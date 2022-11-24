@@ -37,15 +37,14 @@ function toggleMenu() {
         let circleRadius = Math.sqrt((window.innerWidth*window.innerWidth)+((window.innerHeight)*(window.innerHeight)));
         $(".nav-bg").css("height", circleRadius*2 + "px");
         $(".nav-bg").css("width",circleRadius*2 + "px");
-        $(".nav-bg").css("bottom",circleRadius*-1 + "px");
+        $(".nav-bg").css("top",circleRadius*-1 + "px");
     } else {        
         $(".nav-bg").css("height", "160px");
         $(".nav-bg").css("width", "160px");
-        $(".nav-bg").css("bottom", "-80px");
+        $(".nav-bg").css("top", "-80px");
     }
 }
 
 $(document).on("click",".options a", function(){
-    $(".menu").removeClass("open");
-    $(".menu").addClass("closed");
+    toggleMenu();
 });

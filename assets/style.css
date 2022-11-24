@@ -168,19 +168,6 @@ footer a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-}
-
-footer a {
-    border: 0;
-    background-color: white;
-    color: #7c2a67;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    margin: 0 10px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
     text-decoration: none;
 }
 
@@ -196,4 +183,27 @@ footer a:hover {
     align-items: center;
     justify-content: center;
     height: calc(100vh - 300px);
+}
+
+/* Contact */
+.contact {
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.contact label {
+    color: #575757
+}
+
+.contact button {
+    background-color: #7c2a67;
+    border: 0;
+}
+
+.contact button:hover, .contact button:focus-visible, .contact button:active {
+    background-color: #5c1c4b !important;
+}
+
+.form-group {
+    margin-bottom: 10px;
 }
