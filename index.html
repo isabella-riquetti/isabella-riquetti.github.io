@@ -259,30 +259,36 @@
 				</div>
 			</section>
 		</article>
-		<article class="contact">
-			<h1 class="text-center"><i class="fas fa-paper-plane"></i>Contact<a class="anchor" id="contact"></a></h1>
+		<article class="contact container">
 			<section>
-				<div id="messageResult"></div>
-				<form id="contactform" role="form">
-				  <div class="form-group">
-					<input type="text" name="Nome" id="Nome" placeholder="Seu nome" autocomplete="false"/>
-					<div class="validation"></div>
-				  </div>
-				  <div class="form-group">
-					<input type="email" name="Email" id="Email" placeholder="Seu Email" autocomplete="false"/>
-					<div class="validation"></div>
-				  </div>
-				  <div class="form-group">
-					<input type="text" name="Telefone" id="Telefone" placeholder="Seu Telefone"/>
-					<div class="validation"></div>
-				  </div>
-				  <div class="form-group">
-					<textarea name="Mensagem" id="Mensagem" rows="5" placeholder="Mensagem"></textarea>
-					<div class="validation"></div>
-				  </div>
-				  <div class="text-center"><button type="submit">Enviar mensagem</button></div>
-				</form>
+				<h1 class="text-center"><i class="fas fa-paper-plane"></i>Contact<a class="anchor" id="contact"></a>
+				</h1>
 			</section>
+			<div class="row justify-content-md-center justify-content-lg-center">
+				<div class="col-md-8 col-lg-6">
+					<form id="contactform" role="form">
+						<div class="form-group">
+							<label for="Name">What should I call you?</label>
+							<input type="text" name="Name" class="form-control" id="Name" placeholder="Name"
+								autocomplete="false" required />
+						</div>
+						<div class="form-group">
+							<label for="Email">How can I contact you back?</label>
+							<input type="email" name="Email" class="form-control" id="Email" placeholder="Email"
+								autocomplete="false" required />
+						</div>
+						<div class="form-group">
+							<label for="Message">What you want to tell or ask me?</label>
+							<textarea name="Message" id="Message" class="form-control" rows="5" placeholder="Message"
+								required></textarea>
+						</div>
+
+						<div id="messageResult"></div>
+						<div class="text-center"><button class="btn btn-primary" type="submit">Enviar mensagem</button>
+						</div>
+					</form>
+				</div>
+			</div>
 		</article>
 
 	</main>

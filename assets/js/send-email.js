@@ -2,47 +2,23 @@ $(document).ready(function () {
   $("#contactform").submit(function () {
     ShowMessage("info", "Sua mensagem está sendo enviada. Favor aguardar alguns instantes...", "spinner fa-pulse");
 
-    const url = `https://script.google.com/macros/library/d/1oX8osuvViIP9eWzWqrHqRb_cITKwd7bOUF2o4uJ3Aoaa-MGd8FAGssab/1`;
+    const url = `https://script.google.com/macros/s/AKfycbww9C8NIugD0FzAeXz-7iwkJGLF3e62HtKWIfiampIgVIJPgoBVz4Q2b_QneOyDwWmSGQ/exec`;
 
-    const body = $(this).serialize();
-    fetch(url, {
-      method: "POST",
-      headers: {
-        "Access-Control-Allow-Origin": "https://isabella-riquetti.github.io/",
-        "Access-Control-Allow-Credentials": false
+    $.ajax({
+      url: url,
+      type: 'post',
+      redirect: "follow",
+      dataType: 'json',
+      data: $(this).serialize(),
+      crossDomain: true,
+      success: function (data) {
+        ShowMessage("success", "Sua mensagem foi enviada! Obrigado pelo contato!", "check");
       },
-      body: body,
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Success:", data);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-
-
-    // var form = $("#contactform");
-    // var validForm = form.valid();
-    // if (validForm == true) {
-    // $.ajax({
-    //   url: 'https://script.google.com/macros/library/d/1oX8osuvViIP9eWzWqrHqRb_cITKwd7bOUF2o4uJ3Aoaa-MGd8FAGssab/1',
-    //   type: 'post',
-    //   dataType: 'json',
-    //   data: $(this).serialize(),
-    //   crossDomain: true,
-    //   success: function (data) {
-    //     ShowMessage("success", "Sua mensagem foi enviada! Obrigado pelo contato!", "check");
-    //   },
-    //   error: function (xhr, err) {
-    //     ShowMessage("danger", "Infelizmente não conseguimos enviar sua mensagem.", "exclamation-circle");
-    //   }
-    // });
-    // return false;
-    // } else {
-    //   debugger;
-    //   ShowMessage("warning", "Não é possível enviar uma mensagem com os campos informados, favor conferir as mensagens de erro!", "exclamation-triangle");
-    // }
+      error: function (xhr, err) {
+        ShowMessage("danger", "Infelizmente não conseguimos enviar sua mensagem.", "exclamation-circle");
+      }
+    });
+    return false;
   });
 });
 
