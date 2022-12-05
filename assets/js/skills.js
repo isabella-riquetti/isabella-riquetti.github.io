@@ -48,12 +48,12 @@ function addExperience() {
                     [moment(new Date(2020, 10, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //Node.js
                     [moment(new Date(2017, 0, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //HTML/CSS
                     [moment(new Date(2020, 10, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //Angular
-                    [moment(new Date(2021, 3, 1)).valueOf(), moment(new Date(2022, 3, 1)).valueOf()], //Vue
-                    [moment(new Date(2021, 3, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], // React
+                    [moment(new Date(2021, 3, 1)).valueOf(), moment(new Date(2022, 4, 1)).valueOf()], //Vue
+                    [moment(new Date(2022, 5, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], // React
                     [moment(new Date(2015, 0, 1)).valueOf(), moment(new Date(2021, 10, 1)).valueOf()], //SQL
                     [moment(new Date(2020, 10, 1)).valueOf(), moment(new Date(2021, 10, 1)).valueOf()], //MongoDB
-                    [moment(new Date(2021, 3, 1)).valueOf(), moment(new Date(2022, 3, 1)).valueOf()], //Aerospike
-                    [moment(new Date(2021, 3, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], // Postgres
+                    [moment(new Date(2021, 3, 1)).valueOf(), moment(new Date(2022, 4, 1)).valueOf()], //Aerospike
+                    [moment(new Date(2021, 5, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], // Postgres
                     [moment(new Date(2016, 0, 1)).valueOf(), moment(new Date(2021, 10, 1)).valueOf()], //Azure
                     [moment(new Date(2021, 3, 1)).valueOf(), moment(new Date()).valueOf().valueOf()], //AWS
                     [moment(new Date(2016, 5, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //Scrum
