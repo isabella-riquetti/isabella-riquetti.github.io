@@ -13,7 +13,8 @@ function updateCurrentTheme(theme = null) {
 
 
 $(window).ready(function () {
-    $("#checkbox").on("change", function () {
+    $("#theme-switch").prop("checked", getCurrentTheme() == "dark");
+    $("#theme-switch").on("change", function () {
         const switchTheme = getCurrentTheme() == "light" ? "dark" : "light";
         updateCurrentTheme(switchTheme);
         addExperience();
