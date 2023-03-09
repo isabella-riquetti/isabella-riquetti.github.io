@@ -3,7 +3,7 @@ function getCurrentTheme() {
 }
 
 function updateCurrentTheme(theme = null) {
-    const currentTheme = theme ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light");
+    const currentTheme = theme ?? getCurrentTheme() ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light");
     $("body").removeClass("light");
     $("body").removeClass("dark");
     $("body").addClass(currentTheme);
