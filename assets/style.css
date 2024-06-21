@@ -178,7 +178,7 @@ footer a:hover {
 }
 
 /* soon */
-.soon {
+.soon, .maintenance {
     display: flex;
     align-items: center;
     justify-content: center;
