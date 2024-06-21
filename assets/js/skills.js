@@ -36,29 +36,29 @@ function addExperience() {
     let params = {
         type: "bar",
         data: {
-            labels: ['C#', 'Windows Form', '.NET Framework', 'ASP.NET MVC', '.NET Core', 'Javascript', 'Node.js', 'HTML/CSS', 'Angular', 'Vue', 'React', 'MSSQL', 'MongoDB', 'Aerospike', 'Postgres', 'Azure', 'AWS', 'Scrum', 'Kanban', 'ShapeUp', 'Docker'],
+            labels: ['C#', 'Windows Form', '.NET Framework', 'ASP.NET MVC', '.NET Core', 'Javascript', 'Node.js', 'HTML/CSS', 'Typescript', 'Angular', 'Vue', 'React', 'MSSQL', 'MongoDB', 'Aerospike', 'Postgres', 'Azure', 'AWS', 'Scrum', 'Kanban', 'Docker'],
             datasets: [{
                 data: [
-                    [moment(new Date(2015, 0, 1)).valueOf(), moment(new Date(2023, 6, 1)).valueOf()], //C#
+                    [moment(new Date(2015, 0, 1)).valueOf(), moment(new Date(2021, 11, 1)).valueOf()], //C#
                     [moment(new Date(2015, 0, 1)).valueOf(), moment(new Date(2018, 0, 1)).valueOf()], //Windows Form
                     [moment(new Date(2015, 0, 1)).valueOf(), moment(new Date(2020, 10, 1)).valueOf()], //.NET Framework
                     [moment(new Date(2017, 0, 1)).valueOf(), moment(new Date(2020, 10, 1)).valueOf()], //ASP.NET MVC
-                    [moment(new Date(2018, 0, 1)).valueOf(), moment(new Date(2023, 6, 1)).valueOf()], //.NET Core
+                    [moment(new Date(2018, 0, 1)).valueOf(), moment(new Date(2021, 11, 1)).valueOf()], //.NET Core
                     [moment(new Date(2017, 0, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //Javascript
-                    [moment(new Date(2020, 10, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //Node.js
+                    [moment(new Date(2021, 11, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //Node.js
                     [moment(new Date(2017, 0, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //HTML/CSS
+                    [moment(new Date(2020, 10, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //Typescript
                     [moment(new Date(2020, 10, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //Angular
-                    [moment(new Date(2021, 3, 1)).valueOf(), moment(new Date(2022, 4, 1)).valueOf()], //Vue
-                    [moment(new Date(2022, 5, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], // React
+                    [moment(new Date(2021, 2, 1)).valueOf(), moment(new Date(2021, 11, 1)).valueOf()], //Vue
+                    [moment(new Date(2021, 11, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], // React
                     [moment(new Date(2015, 0, 1)).valueOf(), moment(new Date(2021, 10, 1)).valueOf()], //MSSQL
-                    [moment(new Date(2020, 10, 1)).valueOf(), moment(new Date(2021, 10, 1)).valueOf()], //MongoDB
-                    [moment(new Date(2021, 3, 1)).valueOf(), moment(new Date(2022, 4, 1)).valueOf()], //Aerospike
+                    [moment(new Date(2020, 10, 1)).valueOf(), moment(new Date(2021, 11, 1)).valueOf()], //MongoDB
+                    [moment(new Date(2021, 2, 1)).valueOf(), moment(new Date(2021, 11, 1)).valueOf()], //Aerospike
                     [moment(new Date(2022, 5, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], // Postgres
-                    [moment(new Date(2016, 0, 1)).valueOf(), moment(new Date(2023, 6, 1)).valueOf()], //Azure
-                    [moment(new Date(2021, 3, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf().valueOf()], //AWS
+                    [moment(new Date(2016, 0, 1)).valueOf(), moment(new Date(2021, 11, 1)).valueOf()], //Azure
+                    [moment(new Date(2021, 2, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf().valueOf()], //AWS
                     [moment(new Date(2016, 5, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //Scrum
                     [moment(new Date(2018, 8, 1)).valueOf(), moment(new Date(2020, 10, 1)).valueOf()], //Kanban
-                    [moment(new Date(2022, 7, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf()], //ShapeUp
                     [moment(new Date(2021, 3, 1)).valueOf(), moment(new Date().setHours(0, 0, 0, 0)).valueOf().valueOf()], //Docker
                 ],
                 backgroundColor: [
@@ -73,13 +73,13 @@ function addExperience() {
                     COLORS[currentTheme].BARS.FRONTEND_AND_FRAMEWORKS,
                     COLORS[currentTheme].BARS.FRONTEND_AND_FRAMEWORKS,
                     COLORS[currentTheme].BARS.FRONTEND_AND_FRAMEWORKS,
+                    COLORS[currentTheme].BARS.FRONTEND_AND_FRAMEWORKS,
                     COLORS[currentTheme].BARS.DATABASE,
                     COLORS[currentTheme].BARS.DATABASE,
                     COLORS[currentTheme].BARS.DATABASE,
                     COLORS[currentTheme].BARS.DATABASE,
                     COLORS[currentTheme].BARS.CLOUD,
                     COLORS[currentTheme].BARS.CLOUD,
-                    COLORS[currentTheme].BARS.PM_FRAMEWORKS,
                     COLORS[currentTheme].BARS.PM_FRAMEWORKS,
                     COLORS[currentTheme].BARS.PM_FRAMEWORKS,
                     COLORS[currentTheme].BARS.OTHERS,
