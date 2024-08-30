@@ -207,3 +207,27 @@ footer a:hover {
 .form-group {
     margin-bottom: 10px;
 }
+
+.careminder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.careminder .images * {
+    max-height: 450px;
+    width: auto;
+}
+
+.careminder .images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 10px;
+    align-items: center;
+    justify-content: center
+}
+
+.projects {
+    height: 100%;
+}
