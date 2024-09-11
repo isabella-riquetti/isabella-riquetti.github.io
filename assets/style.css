@@ -212,6 +212,19 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 30px;
+}
+
+.careminder .demos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.careminder .text-center {
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
 .careminder .images * {
@@ -230,4 +243,12 @@ footer a:hover {
 
 .projects {
     height: 100%;
+}
+
+.careminder .warnings {
+    margin: 0 20%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 20px;
 }

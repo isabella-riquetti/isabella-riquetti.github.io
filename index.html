@@ -13,6 +13,8 @@
 	<link rel="stylesheet" href="./assets/css/theme.css" />
 	<link rel="stylesheet" href="./assets/css/typing.css" />
 	<link rel="stylesheet" href="./assets/css/menu.css" />
+	<link rel="stylesheet" href="./assets/css/carrousel.css" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="./assets/style.css" />
 </head>
 
@@ -69,14 +71,16 @@
 								<h3>Front-end Developer</h3>
 								<h4>Company: <span class="blur">Please contact for resume</span></h4>
 								<h4>Duration: Nov 2021 to Current (~2½ years)</h4>
-								<p>Increasingly focusing on front-end development, with plans to expand this role in the future.</p>
+								<p>Increasingly focusing on front-end development, with plans to expand this role in the
+									future.</p>
 							</div>
 							<div class="timeline-item">
 								<i class="fas fa-briefcase"></i>
 								<h3>Support Engineer</h3>
 								<h4>Company: Ringba</h4>
 								<h4>Duration: Jul 2021 to Nov 2021</span> (~6 months)</h4>
-								<p>This role offered a unique opportunity for direct client interaction, allowing me to address their needs and receive immediate feedback.<br />
+								<p>This role offered a unique opportunity for direct client interaction, allowing me to
+									address their needs and receive immediate feedback.<br />
 									During this time I:
 								<ul>
 									<li>Analyzed client and manager issues to create technical tasks to improve the
@@ -167,7 +171,8 @@
 								<h3>Post-graduation in Software Engineering</h3>
 								<h4>University: Pontifical Catholic University of Minas Gerais</h4>
 								<h4>Duration: Mar 2018 to Nov 2019</h4>
-								<p>Despite its short duration, this course significantly enhanced my solid foundation in software engineering
+								<p>Despite its short duration, this course significantly enhanced my solid foundation in
+									software engineering
 								<ul>
 									<li>Software Design</li>
 									<li>Front and Back End Architecture</li>
@@ -245,17 +250,79 @@
 		<article class="projects">
 			<h1 class="text-center"><i class="fas fa-folder-open"></i>Projects<a class="anchor" id="projects"></a></h1>
 			<section class="careminder">
-				<h2 class="text-center"><a href="https://careminder.netlify.app/actions">CareMinder</a> (In Progress)</h2>
-				<span>A simple React+Vite FE with Node.js backend to handle self care appoitments.</span>
-				<span>Also featuring a resposive design for mobile phones:</span>
-				<div class="images">
-					<img class="desktop" src="./assets/img/careminder-desktop.png" style="width: 70%;"/>
-					<img class="mobile" src="./assets/img/careminder-mobile.png" />
+				<h2 class="text-center">
+					<a href="https://careminder.netlify.app/actions">CareMinder</a>
+					<a href="https://github.com/isabella-riquetti/careminder"><img src="./assets//img/git-icon.png"
+							style="width: 35px;"></a>
+				</h2>
+				<div class="warnings">
+					<span>A simple React+Vite FE with Node.js backend to handle self care appoitments.</span>
+					<span>Please be patient, first load might take some time since we're using free resources that go to
+						sleep really fast after some iddle time.</span>
 				</div>
+
+				<div class="swiper-container desktop">
+					<div class="swiper-button-prev"></div>
+
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img class="desktop" src="./assets/img/careminder-desktop-create.png"
+								alt="careminder create on desktop" />
+						</div>
+						<div class="swiper-slide">
+							<img class="desktop" src="./assets/img/careminder-desktop-month.png"
+								alt="careminder month view on desktop" />
+						</div>
+						<div class="swiper-slide">
+							<img class="desktop" src="./assets/img/careminder-desktop-week.png"
+								alt="careminder week view on desktop" />
+						</div>
+						<div class="swiper-slide">
+							<img class="desktop" src="./assets/img/careminder-desktop-day.png"
+								alt="careminder day view on desktop" />
+						</div>
+						<div class="swiper-slide">
+							<img class="desktop" src="./assets/img/careminder-desktop-list.png"
+								alt="careminder list view on desktop" />
+						</div>
+					</div>
+
+					<div class="swiper-button-next"></div>
+				</div>
+
+				<div class="swiper-container mobile">
+					<div class="swiper-button-prev"></div>
+
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img class="desktop" src="./assets/img/careminder-mobile-create.png"
+								alt="careminder create on mobile" />
+						</div>
+						<div class="swiper-slide">
+							<img class="desktop" src="./assets/img/careminder-mobile-month.png"
+								alt="careminder month view on mobile" />
+						</div>
+						<div class="swiper-slide">
+							<img class="desktop" src="./assets/img/careminder-mobile-week.png"
+								alt="careminder week view on mobile" />
+						</div>
+						<div class="swiper-slide">
+							<img class="desktop" src="./assets/img/careminder-mobile-day.png"
+								alt="careminder day view on mobile" />
+						</div>
+						<div class="swiper-slide">
+							<img class="desktop" src="./assets/img/careminder-mobile-list.png"
+								alt="careminder list view on mobile" />
+						</div>
+					</div>
+
+					<div class="swiper-button-next"></div>
+				</div>
+
 			</section>
 		</article>
 		<article class="contact">
-			<h1 class="text-center"><i class="fas fa-paper-plane"></i>Contact<a class="anchor" id="contact"></a></h1>
+			<h1 class="text-center"><i class="fas fa-paper-plane"></i><a class="anchor" id="contact"></a></h1>
 		</article>
 	</main>
 	<footer>
@@ -275,6 +342,8 @@
 	<script src="./assets/js/theme.js"></script>
 	<script src="./assets/js/skills.js"></script>
 	<script src="./assets/js/send-email.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src="./assets/js/carrousel.js"></script>
 	<script src="./assets/script.js"></script>
 </body>
 
